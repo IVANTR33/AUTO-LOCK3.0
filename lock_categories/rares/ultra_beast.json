@@ -1,0 +1,20 @@
+{
+    "category_name": "ultra best",
+    "title": "Utra-Entes",
+    "description": "Lista de Pokémon ultra entes.",
+    "default_type": "private", 
+    "emoji": "<:guzzlord:1437676671531483229>",
+    "pokemon_list": [
+        "nihilego",
+        "buzzwole",
+        "pheromosa",
+        "xurkitree",
+        "celesteela",
+        "kartana",
+        "guzzlord",
+        "poipole",
+        "naganadel",
+        "stakataka",
+        "blacephalon"
+    ]
+}

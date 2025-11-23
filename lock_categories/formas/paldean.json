@@ -1,0 +1,15 @@
+{
+    "category_name": "paldean",
+    "title": "paldea-form",
+    "description": "Lista de Pokémon de formas de paldea y evoluciones.",
+    "default_type": "private", 
+    "emoji": "",
+    "pokemon_list": [
+        "annihilape",
+        "kingambit",
+        "paldean Wooper",
+        "combat breed tauros",
+        "blaze breed tauros",
+        "aqua breed tauros"
+    ]
+}

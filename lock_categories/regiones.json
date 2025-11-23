@@ -1,0 +1,7 @@
+{
+    "title": "Regiones",
+    "description": "Selecciona una Region para ver las cateogrias de regiones y seleccionar una.",
+    "emoji": "",
+    "is_submenu": true,
+    "source_dir": "regiones"
+}

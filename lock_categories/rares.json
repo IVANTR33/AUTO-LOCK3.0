@@ -1,0 +1,7 @@
+{
+    "title": "Rares",
+    "description": "Selecciona una categoria para ver los pokemon sin genero para establecer los estados de bloqueo .",
+    "emoji": "",
+    "is_submenu": true,
+    "source_dir": "rares"
+}

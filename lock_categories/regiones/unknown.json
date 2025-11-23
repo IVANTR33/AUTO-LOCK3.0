@@ -1,0 +1,10 @@
+{
+    "title": "Unknown",
+    "emoji": "⭐",
+    "default_type": "public",
+    "pokemon_list": [
+        "meltan",
+        "melmetal",
+        "missingno"
+    ]
+}

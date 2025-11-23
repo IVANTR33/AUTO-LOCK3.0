@@ -1,0 +1,7 @@
+{
+    "title": "Formas",
+    "description": "Selecciona un una categoria regional para config los estados de bloqueo.",
+    "emoji": "<:mutanciones:1437637326254641253>",
+    "is_submenu": true,
+    "source_dir": "formas"
+}

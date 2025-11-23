@@ -1,0 +1,30 @@
+{
+    "title": "Hisui",
+    "emoji": "⭐",
+    "default_type": "public",
+    "pokemon_list": [
+        "hisuian growlithe",
+        "hisuian arcanine",
+        "hisuian voltorb",
+        "hisuian electrode",
+        "hisuian qwilfish",
+        "hisuian sneasel",
+        "hisuian samurott",
+        "hisuian lilligant",
+        "hisuian zorua",
+        "hisuian zoroark",
+        "hisuian braviary",
+        "hisuian sliggoo",
+        "hisuian goodra",
+        "hisuian avalugg",
+        "hisuian decidueye",
+        "wyrdeer",
+        "kleavor",
+        "ursaluna",
+        "basculegion",
+        "sneasler",
+        "overqwil",
+        "enamorus",
+        "hisuian typhlosion"
+    ]
+}

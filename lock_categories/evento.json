@@ -1,0 +1,8 @@
+{
+    "category_name": "evento",
+    "title": "Evento",
+    "description": "Lista de Pokémon de evento",
+    "default_type": "private", 
+    "emoji": "🎁",
+    "pokemon_list": []
+}

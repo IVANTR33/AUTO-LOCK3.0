@@ -1,0 +1,31 @@
+{
+    "category_name": "hisuian",
+    "title": "Hisuian-Form",
+    "description": "Lista de Pokémon de Hisui y sus evoluciones exclusivas.",
+    "default_type": "private",
+    "emoji": "",
+    "pokemon_list": [
+        "hisuian growlithe",
+        "hisuian arcanine",
+        "hisuian voltorb",
+        "hisuian electrode",
+        "hisuian qwilfish",
+        "overqwil",
+        "hisuian sneasel",
+        "sneasler",
+        "hisuian zorua",
+        "hisuian zoroark",
+        "hisuian lilligant",
+        "hisuian braviary",
+        "hisuian sliggoo",
+        "hisuian goodra",
+        "hisuian avalugg",
+        "hisuian typhlosion",
+        "hisuian decidueye",
+        "hisuian samurott",
+        "wyrdeer",
+        "kleavor",
+        "ursaluna",
+        "basculegion"
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "category_name": "alolan",
+    "title": "Alolan-Form",
+    "description": "Lista de Pokémon regionales de alola.",
+    "default_type": "private", 
+    "emoji": "",
+    "pokemon_list": [
+        "alolan rattata",
+        "alolan raticate",
+        "alolan raichu",
+        "alolan sandshrew",
+        "alolan sandslash",
+        "alolan vulpix",
+        "alolan ninetales",
+        "alolan diglett",
+        "alolan dugtrio",
+        "alolan meowth",
+        "alolan persian",
+        "alolan geodude",
+        "alolan graveler",
+        "alolan golem",
+        "alolan grimer",
+        "alolan muk",
+        "alolan exeggutor",
+        "alolan marowak"
+    ]
+}

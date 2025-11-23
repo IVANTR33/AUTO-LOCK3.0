@@ -1,0 +1,5074 @@
+{
+  "mew": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "celebi": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "jirachi": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "deoxys": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "attack deoxys": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "defense deoxys": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "speed deoxys": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "phione": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "manaphy": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "darkrai": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "shaymin": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "arceus": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "bug arceus": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "dark arceus": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "dragon arceus": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "electric arceus": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "fighting arceus": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "fire arceus": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "flying arceus": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "ghost arceus": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "grass arceus": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "ground arceus": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "ice arceus": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "poison arceus": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "psychic arceus": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "rock arceus": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "steel arceus": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "water arceus": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "fairy arceus": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "victini": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "keldeo": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "meloetta": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "pirouette meloetta": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "genesect": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "high-speed flight configuration genesect": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "diancie": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "hoopa": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "volcanion": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "magearna": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "marshadow": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "zenith marshadow": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "zeraora": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "meltan": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "melmetal": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "zarude": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "dada zarude": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "pecharunt": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "bulbasaur": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "ivysaur": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "venusaur": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "charmander": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "charmeleon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "charizard": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "squirtle": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "wartortle": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "blastoise": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "caterpie": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "metapod": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "butterfree": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "weedle": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "kakuna": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "beedrill": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "pidgey": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "pidgeotto": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "pidgeot": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "rattata": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "raticate": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "spearow": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "fearow": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "ekans": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "arbok": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "pikachu": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "partner pikachu": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "raichu": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "sandshrew": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "sandslash": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "nidoran♀️": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "nidorina": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "nidoqueen": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "nidoran♂️": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "nidorino": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "nidoking": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "clefairy": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "clefable": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "vulpix": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "ninetales": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "jigglypuff": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "wigglytuff": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "zubat": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "golbat": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "oddish": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "gloom": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "vileplume": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "paras": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "parasect": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "venonat": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "venomoth": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "diglett": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "dugtrio": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "meowth": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "persian": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "psyduck": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "golduck": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "mankey": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "primeape": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "growlithe": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "arcanine": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "poliwag": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "poliwhirl": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "poliwrath": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "abra": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "kadabra": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "alakazam": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "machop": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "machoke": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "machamp": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "bellsprout": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "weepinbell": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "victreebel": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "tentacool": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "tentacruel": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "geodude": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "graveler": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "golem": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "ponyta": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "rapidash": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "slowpoke": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "slowbro": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "magnemite": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "magneton": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "farfetch'd": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "doduo": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "dodrio": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "seel": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "dewgong": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "grimer": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "muk": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "shellder": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "cloyster": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "gastly": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "haunter": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "gengar": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "onix": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "drowzee": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "hypno": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "krabby": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "kingler": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "voltorb": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "electrode": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "exeggcute": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "exeggutor": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "cubone": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "marowak": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "hitmonlee": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "hitmonchan": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "lickitung": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "koffing": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "weezing": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "rhyhorn": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "rhydon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "chansey": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "tangela": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "kangaskhan": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "horsea": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "seadra": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "goldeen": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "seaking": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "staryu": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "starmie": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "mr. mime": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "scyther": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "jynx": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "electabuzz": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "magmar": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "pinsir": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "tauros": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "magikarp": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "gyarados": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "lapras": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "ditto": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "eevee": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "vaporeon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "jolteon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "flareon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "porygon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "omanyte": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "omastar": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "kabuto": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "kabutops": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "aerodactyl": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "snorlax": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "articuno": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "dragonair": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "dragonite": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "dratini": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "mewtwo": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "moltres": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "partner eevee": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "zapdos": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "10% zygarde": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "abomasnow": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "absol": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "accelgor": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "aegislash": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "aggron": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "aipom": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "alcremie": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "alolan diglett": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "alolan dugtrio": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "alolan exeggutor": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "alolan geodude": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "alolan golem": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "alolan graveler": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "alolan grimer": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "alolan marowak": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "alolan meowth": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "alolan muk": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "alolan ninetales": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "alolan persian": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "alolan raichu": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "alolan raticate": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "alolan rattata": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "alolan sandshrew": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "alolan sandslash": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "alolan vulpix": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "alomomola": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "altaria": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "amaura": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "ambipom": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "amoonguss": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "amped toxtricity": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "ampharos": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "annihilape": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "anorith": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "appletun": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "applin": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "aqua breed tauros": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "araquanid": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "arboliva": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "archaludon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "archen": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "archeops": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "archipelago vivillon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "arctibax": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "arctovish": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "arctozolt": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "ariados": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "armaldo": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "armarouge": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "aromatisse": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "aron": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "arrokuda": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "audino": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "aurorus": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "autumn deerling": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "autumn sawsbuck": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "avalugg": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "axew": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "azelf": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "azumarill": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "azurill": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "bagon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "baltoy": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "banette": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "barbaracle": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "barboach": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "barraskewda": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "basculegion": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "basculin": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "bastiodon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "battle cyclizar": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "baxcalibur": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "bayleef": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "beartic": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "beautifly": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "beheeyem": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "beldum": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "bellibolt": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "bellossom": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "bergmite": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "bewear": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "bibarel": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "bidoof": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "binacle": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "bisharp": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "blacephalon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "blade aegislash": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "blaze breed tauros": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "blaziken": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "blipbug": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "blissey": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "blitzle": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "bloodmoon ursaluna": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "blue flower flabébé": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "blue flower floette": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "blue flower florges": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "blue plumage squawkabilly": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "blue-striped basculin": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "boldore": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "boltund": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "bombirdier": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "bonsly": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "bouffalant": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "bounsweet": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "braixen": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "brambleghast": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "bramblin": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "braviary": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "breloom": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "brionne": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "bronzong": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "bronzor": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "brute bonnet": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "bruxish": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "budew": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "bug silvally": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "buizel": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "buneary": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "bunnelby": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "burmy": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "buzzwole": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "cacnea": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "cacturne": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "calyrex": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "camerupt": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "capsakid": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "carbink": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "carkol": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "carnivine": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "carracosta": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "carvanha": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "cascoon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "castform": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "celesteela": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "centiskorch": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "ceruledge": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "cetitan": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "cetoddle": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "chandelure": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "charcadet": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "charjabug": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "chatot": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "cherrim": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "cherubi": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "chesnaught": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "chespin": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "chewtle": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "chi-yu": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "chien-pao": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "chikorita": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "chimchar": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "chimecho": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "chinchou": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "chingling": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "cinccino": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "cinderace": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "clamperl": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "clauncher": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "clawitzer": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "claydol": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "cleffa": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "clobbopus": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "clodsire": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "coalossal": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "cobalion": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "cofagrigus": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "combat breed tauros": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "combee": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "combusken": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "comfey": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "complete zygarde": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "conkeldurr": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "continental vivillon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "copperajah": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "cornerstone mask ogerpon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "corphish": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "corsola": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "corviknight": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "corvisquire": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "cosmoem": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "cosmog": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "cottonee": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "crabominable": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "crabrawler": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "cradily": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "cramorant": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "cranidos": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "crawdaunt": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "cresselia": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "croagunk": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "crobat": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "crocalor": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "croconaw": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "crustle": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "cryogonal": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "cubchoo": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "cufant": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "cursola": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "cutiefly": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "cyclizar": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "cyndaquil": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "dachsbun": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "dandy trim furfrou": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "dark silvally": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "darmanitan": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "dartrix": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "darumaka": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "debutante trim furfrou": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "decidueye": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "dedenne": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "deerling": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "deino": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "delcatty": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "delibird": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "delphox": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "dewott": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "dewpider": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "dhelmise": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "dialga": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "diamond trim furfrou": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "diggersby": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "dipplin": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "dolliv": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "dondozo": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "donphan": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "dottler": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "doublade": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "dracovish": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "dracozolt": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "dragalge": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "dragapult": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "dragon silvally": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "drakloak": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "drampa": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "drapion": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "drednaw": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "dreepy": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "drifblim": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "drifloon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "drilbur": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "drive mode miraidon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "drizzile": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "droopy tatsugiri": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "druddigon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "dubwool": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "ducklett": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "dudunsparce": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "dunsparce": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "duosion": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "duraludon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "durant": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "dusclops": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "dusk lycanroc": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "dusknoir": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "duskull": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "dustox": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "dwebble": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "east sea gastrodon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "east sea shellos": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "eelektrik": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "eelektross": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "eiscue": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "eldegoss": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "electivire": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "electric silvally": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "electrike": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "elegant vivillon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "elekid": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "elgyem": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "emboar": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "emolga": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "empoleon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "enamorus": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "entei": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "escavalier": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "espathra": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "espeon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "espurr": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "eternatus": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "excadrill": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "exploud": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "fairy silvally": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "falinks": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "family of three maushold": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "fan rotom": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "fancy vivillon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "farigiraf": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "feebas": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "fennekin": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "feraligatr": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "ferroseed": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "ferrothorn": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "fezandipiti": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "fidough": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "fighting silvally": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "finizen": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "finneon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "fire silvally": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "flaaffy": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "flabébé": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "flamigo": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "flapple": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "fletchinder": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "fletchling": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "flittle": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "floatzel": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "floette": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "floragato": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "florges": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "flutter mane": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "flygon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "flying silvally": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "fomantis": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "foongus": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "forretress": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "fraxure": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "frigibax": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "frillish": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "froakie": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "frogadier": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "froslass": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "frosmoth": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "frost rotom": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "fuecoco": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "furfrou": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "furret": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "gabite": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "galarian articuno": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "galarian corsola": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "galarian darmanitan": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "galarian darumaka": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "galarian farfetch'd": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "galarian linoone": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "galarian meowth": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "galarian moltres": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "galarian mr. mime": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "galarian ponyta": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "galarian rapidash": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "galarian slowbro": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "galarian slowking": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "galarian slowpoke": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "galarian stunfisk": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "galarian weezing": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "galarian yamask": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "galarian zapdos": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "galarian zen darmanitan": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "galarian zigzagoon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "gallade": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "galvantula": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "garbodor": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "garchomp": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "garden vivillon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "gardevoir": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "garganacl": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "gastrodon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "gholdengo": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "ghost silvally": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "gible": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "gigalith": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "gimmighoul": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "girafarig": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "giratina": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "glaceon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "glalie": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "glameow": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "glastrier": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "glide mode miraidon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "gliding build koraidon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "gligar": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "glimmet": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "glimmora": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "gliscor": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "gogoat": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "golett": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "golisopod": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "golurk": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "goodra": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "goomy": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "gorebyss": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "gorging cramorant": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "gossifleur": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "gothita": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "gothitelle": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "gothorita": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "gouging fire": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "gourgeist": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "grafaiai": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "granbull": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "grapploct": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "grass silvally": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "great tusk": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "greavard": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "greedent": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "greninja": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "grimmsnarl": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "grookey": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "grotle": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "groudon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "ground silvally": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "grovyle": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "grubbin": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "grumpig": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "gulpin": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "gulping cramorant": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "gumshoos": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "gurdurr": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "guzzlord": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "hakamo-o": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "hangry morpeko": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "happiny": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "hariyama": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "hatenna": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "hatterene": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "hattrem": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "hawlucha": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "haxorus": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "heart trim furfrou": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "hearthflame mask ogerpon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "heat rotom": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "heatmor": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "heatran": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "heliolisk": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "helioptile": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "heracross": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "herdier": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "hero palafin": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "high plain vivillon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "hippopotas": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "hippowdon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "hisuian arcanine": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "hisuian avalugg": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "hisuian braviary": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "hisuian decidueye": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "hisuian electrode": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "hisuian goodra": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "hisuian growlithe": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "hisuian lilligant": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "hisuian qwilfish": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "hisuian samurott": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "hisuian sliggoo": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "hisuian sneasel": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "hisuian typhlosion": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "hisuian voltorb": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "hisuian zoroark": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "hisuian zorua": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "hitmontop": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "ho-oh": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "honchkrow": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "honedge": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "hoothoot": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "hoppip": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "houndoom": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "houndour": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "houndstone": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "huntail": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "hydrapple": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "hydreigon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "ice silvally": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "icy snow vivillon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "igglybuff": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "illumise": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "impidimp": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "incineroar": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "indeedee": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "infernape": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "inkay": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "inteleon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "iron boulder": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "iron bundle": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "iron crown": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "iron hands": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "iron jugulis": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "iron leaves": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "iron moth": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "iron thorns": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "iron treads": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "iron valiant": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "jangmo-o": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "jellicent": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "joltik": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "jumpluff": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "jungle vivillon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "kabuki trim furfrou": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "karrablast": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "kartana": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "kecleon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "kilowattrel": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "kingambit": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "kingdra": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "kirlia": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "klang": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "klawf": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "kleavor": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "klefki": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "klink": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "klinklang": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "komala": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "kommo-o": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "koraidon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "kricketot": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "kricketune": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "krokorok": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "krookodile": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "kubfu": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "kyogre": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "kyurem": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "la reine trim furfrou": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "lairon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "lampent": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "landorus": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "lanturn": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "larvesta": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "larvitar": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "latias": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "latios": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "leafeon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "leavanny": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "lechonk": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "ledian": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "ledyba": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "lickilicky": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "liepard": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "lileep": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "lilligant": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "lillipup": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "linoone": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "litleo": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "litten": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "litwick": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "lokix": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "lombre": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "lopunny": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "lotad": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "loudred": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "low key toxtricity": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "lucario": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "ludicolo": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "lugia": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "lumineon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "lunala": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "lunatone": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "lurantis": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "luvdisc": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "luxio": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "luxray": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "lycanroc": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "mabosstiff": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "magby": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "magcargo": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "magmortar": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "magnezone": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "makuhita": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "malamar": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "mamoswine": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "mandibuzz": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "manectric": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "mantine": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "mantyke": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "maractus": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "mareanie": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "mareep": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "marill": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "marine vivillon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "marshtomp": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "maschiff": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "masquerain": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "matron trim furfrou": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "maushold": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "mawile": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "medicham": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "meditite": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "meganium": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "meowscarada": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "meowstic": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "mesprit": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "metagross": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "metang": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "midnight lycanroc": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "mienfoo": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "mienshao": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "mightyena": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "milcery": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "milotic": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "miltank": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "mime jr": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "mimikyu": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "minccino": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "minior": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "minun": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "miraidon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "misdreavus": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "mismagius": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "missingno": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "modern vivillon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "monferno": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "monsoon vivillon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "morelull": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "morgrem": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "morpeko": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "mothim": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "mow rotom": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "mr. rime": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "mudbray": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "mudkip": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "mudsdale": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "munchlax": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "munkidori": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "munna": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "murkrow": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "musharna": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "nacli": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "naclstack": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "naganadel": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "natu": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "necrozma": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "neutral xerneas": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "nickit": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "nihilego": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "nincada": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "ninjask": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "noctowl": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "noibat": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "noice face eiscue": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "noivern": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "nosepass": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "numel": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "nuzleaf": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "nymble": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "obstagoon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "ocean vivillon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "octillery": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "ogerpon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "oinkologne": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "okidogi": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "orange flower flabébé": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "orange flower floette": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "orange flower florges": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "oranguru": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "orbeetle": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "oricorio": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "orthworm": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "oshawott": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "overqwil": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "pa'u oricorio": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "pachirisu": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "palafin": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "paldean wooper": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "palkia": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "palossand": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "palpitoad": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "pancham": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "pangoro": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "panpour": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "pansage": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "pansear": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "passimian": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "patrat": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "pawmi": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "pawmo": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "pawmot": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "pawniard": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "pelipper": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "perrserker": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "petilil": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "phanpy": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "phantump": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "pharaoh trim furfrou": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "pheromosa": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "pichu": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "pidove": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "pignite": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "pikipek": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "piloswine": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "pincurchin": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "pineco": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "piplup": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "plusle": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "poipole": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "poison silvally": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "poké ball vivillon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "polar vivillon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "politoed": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "poltchageist": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "polteageist": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "pom-pom oricorio": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "poochyena": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "popplio": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "porygon-z": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "porygon2": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "primarina": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "prinplup": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "probopass": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "psychic silvally": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "pumpkaboo": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "pupitar": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "purrloin": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "purugly": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "pyroar": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "pyukumuku": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "quagsire": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "quaquaval": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "quaxly": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "quaxwell": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "quilava": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "quilladin": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "qwilfish": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "raboot": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "rabsca": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "raging bolt": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "raikou": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "rainy castform": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "ralts": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "rampardos": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "rapid strike urshifu": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "rayquaza": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "regice": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "regidrago": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "regieleki": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "regigigas": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "regirock": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "registeel": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "relicanth": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "rellor": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "remoraid": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "reshiram": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "reuniclus": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "revavroom": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "rhyperior": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "ribombee": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "ride cyclizar": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "rillaboom": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "riolu": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "river vivillon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "roaming gimmighoul": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "roaring moon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "rock silvally": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "rockruff": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "roggenrola": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "rolycoly": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "rookidee": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "roselia": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "roserade": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "rotom": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "rotom drone": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "rotom phone": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "rotom pokédex": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "rowlet": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "rufflet": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "runerigus": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "sableye": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "salamence": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "salandit": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "salazzle": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "samurott": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "sandaconda": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "sandile": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "sandstorm vivillon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "sandy burmy": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "sandy shocks": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "sandy wormadam": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "sandygast": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "savanna vivillon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "sawk": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "sawsbuck": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "scatterbug": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "sceptile": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "school wishiwashi": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "scizor": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "scolipede": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "scorbunny": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "scovillain": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "scrafty": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "scraggy": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "scream tail": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "sealeo": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "seedot": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "seismitoad": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "sensu oricorio": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "sentret": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "serperior": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "servine": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "seviper": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "sewaddle": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "sharpedo": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "shedinja": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "shelgon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "shellos": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "shelmet": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "shieldon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "shiftry": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "shiinotic": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "shinx": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "shroodle": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "shroomish": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "shuckle": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "shuppet": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "sigilyph": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "silcoon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "silicobra": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "silvally": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "simipour": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "simisage": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "simisear": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "sinistcha": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "sinistea": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "sirfetch'd": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "sizzlipede": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "skarmory": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "skeledirge": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "skiddo": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "skiploom": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "skitty": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "skorupi": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "skrelp": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "skuntank": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "skwovet": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "slaking": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "slakoth": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "sliggoo": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "slither wing": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "slowking": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "slugma": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "slurpuff": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "smeargle": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "smoliv": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "smoochum": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "sneasel": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "sneasler": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "snivy": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "snom": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "snorunt": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "snover": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "snowy castform": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "snubbull": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "sobble": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "solgaleo": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "solosis": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "solrock": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "spectrier": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "spewpa": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "spheal": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "spidops": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "spiky-eared pichu": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "spinarak": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "spinda": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "spiritomb": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "spoink": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "sprigatito": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "sprinting build koraidon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "spritzee": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "squawkabilly": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "stakataka": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "stantler": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "star trim furfrou": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "staraptor": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "staravia": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "starly": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "steel silvally": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "steelix": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "steenee": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "stonjourner": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "stoutland": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "stretchy tatsugiri": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "stufful": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "stunfisk": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "stunky": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "sudowoodo": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "suicune": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "summer deerling": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "summer sawsbuck": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "sun vivillon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "sunflora": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "sunkern": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "sunny castform": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "sunshine cherrim": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "surskit": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "swablu": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "swadloon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "swalot": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "swampert": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "swanna": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "swellow": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "swinub": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "swirlix": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "swoobat": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "sylveon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "tadbulb": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "taillow": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "talonflame": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "tandemaus": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "tangrowth": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "tapu bulu": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "tapu fini": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "tapu koko": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "tapu lele": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "tarountula": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "tatsugiri": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "teddiursa": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "tepig": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "terapagos": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "terastal terapagos": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "terrakion": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "thievul": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "three-segment dudunsparce": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "throh": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "thundurus": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "thwackey": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "timburr": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "ting-lu": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "tinkatink": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "tinkaton": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "tinkatuff": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "tirtouga": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "toedscool": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "toedscruel": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "togedemaru": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "togekiss": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "togepi": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "togetic": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "torchic": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "torkoal": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "tornadus": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "torracat": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "torterra": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "totodile": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "toucannon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "toxapex": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "toxel": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "toxicroak": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "tranquill": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "trapinch": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "trash burmy": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "trash wormadam": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "treecko": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "trevenant": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "tropius": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "trubbish": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "trumbeak": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "tsareena": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "tundra vivillon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "turtonator": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "turtwig": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "tympole": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "tynamo": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "type: null": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "typhlosion": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "tyranitar": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "tyrantrum": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "tyrogue": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "tyrunt": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "umbreon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "unfezant": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "unown": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "unown a": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "unown b": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "unown c": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "unown d": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "unown e": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "unown exclamation": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "unown g": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "unown h": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "unown i": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "unown j": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "unown k": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "unown l": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "unown m": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "unown n": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "unown o": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "unown p": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "unown q": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "unown question": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "unown r": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "unown s": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "unown t": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "unown u": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "unown v": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "unown w": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "unown x": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "unown y": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "unown z": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "ursaluna": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "ursaring": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "urshifu": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "uxie": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "vanilla cream berry sweet alcremie": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "vanilla cream clover sweet alcremie": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "vanilla cream flower sweet alcremie": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "vanilla cream love sweet alcremie": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "vanilla cream ribbon sweet alcremie": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "vanilla cream star sweet alcremie": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "vanillish": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "vanillite": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "vanilluxe": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "varoom": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "veluza": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "venipede": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "vespiquen": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "vibrava": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "vigoroth": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "vikavolt": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "virizion": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "vivillon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "volbeat": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "volcarona": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "vullaby": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "wailmer": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "wailord": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "walking wake": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "walrein": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "wash rotom": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "watchog": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "water silvally": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "wattrel": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "weavile": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "wellspring mask ogerpon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "whimsicott": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "whirlipede": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "whiscash": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "whismur": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "white flower flabébé": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "white flower floette": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "white flower florges": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "white plumage squawkabilly": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "white-striped basculin": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "wiglett": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "wimpod": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "wingull": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "winter deerling": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "winter sawsbuck": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "wishiwashi": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "wo-chien": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "wobbuffet": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "woobat": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "wooloo": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "wooper": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "wormadam": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "wugtrio": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "wurmple": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "wynaut": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "wyrdeer": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "xatu": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "xerneas": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "xurkitree": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "yamask": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "yamper": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "yanma": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "yanmega": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "yellow flower flabébé": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "yellow flower floette": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "yellow flower florges": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "yellow plumage squawkabilly": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "yungoos": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "yveltal": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "zacian": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "zamazenta": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "zangoose": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "zebstrika": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "zekrom": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "zen darmanitan": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "zigzagoon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "zoroark": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "zorua": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "zweilous": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "zygarde": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "zygarde cell": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "zygarde core": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "poke ball vivillon": {
+    "is_locked": false,
+    "lock_type": "public"
+  },
+  "screan tail": {
+    "is_locked": true,
+    "lock_type": "private"
+  }
+}
