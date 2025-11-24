@@ -112,7 +112,10 @@ function saveLockStatus() {
 
 loadLockStatus();
 
-
+/**
+ * [FIX CACHÉ] Lee el estado de bloqueo directamente del disco, asegurando que sea la versión más reciente.
+ * @returns {Object} El contenido de lock_status.json.
+ */
 function getLocksFromDisk() {
     try {
         if (!fs.existsSync(lockStatusPath)) return {};
@@ -160,42 +163,75 @@ function extractPokemonName(raw, authorId) {
   const SPECIAL_BOT_ID = '854233015475109888'; // Bot de Porcentaje
   const NIDORAN_SPECIAL_ID = '874910942490677270'; // Bot que usa (F)/(M)
   
-  const FEMALE_SYM = '\u2640'; 
-  const MALE_SYM = '\u2642'; 
-  const VARIATION_SELECTOR = '\uFE0F'; // ️ (para manejar emojis) 
+  const FEMALE_SYM = '\u2640'; // ♀
+  const MALE_SYM = '\u2642'; // ♂
+  const VARIATION_SELECTOR = '\uFE0F'; // ️ (para manejar emojis)
+
+  // ----------------------------------------------------
+  // PASO 0: Protección de Símbolos de Género (Nidoran) y estandarización a ♀/♂
+  // Reemplazamos Nidoran♂/♀ (con o sin selector de variación) por un marcador temporal
   line = line.replace(new RegExp(`nidoran\\s*${MALE_SYM}${VARIATION_SELECTOR}?`, 'gi'), 'NIDORAN_MALE_PLACEHOLDER'); 
   line = line.replace(new RegExp(`nidoran\\s*${FEMALE_SYM}${VARIATION_SELECTOR}?`, 'gi'), 'NIDORAN_FEMALE_PLACEHOLDER');
+  // ----------------------------------------------------
+
+  // REGLA 1: Eliminar "##" al inicio (solo los dos caracteres)
   if (line.startsWith('##')) {
     line = line.substring(2).trim(); 
   }
+
+  // REGLA 2: Bot especial (854233015475109888) - Filtrado por porcentaje/dos puntos (:)
   if (String(authorId) === SPECIAL_BOT_ID) {
     if (line.toLowerCase().startsWith('type: null:')) {
+      // Caso: Type: Null: 97.478% -> Extraer 'Type: Null' (antes del segundo ':')
       const firstColonIndex = line.indexOf(':');
       const secondColonIndex = line.indexOf(':', firstColonIndex + 1);
       if (secondColonIndex !== -1) {
         line = line.substring(0, secondColonIndex);
       }
     } else if (line.includes(':')) {
+      // Caso general para este bot: PokemonName: 97.693% -> Extraer 'PokemonName' (antes del primer ':')
       line = line.split(':')[0];
     }
   }
+
+  // Regla existente: Eliminar contenido después del em-dash (—)
   if (line.indexOf('—') !== -1) {
     line = line.split('—')[0].trim();
   }
+  
+  // NUEVA REGLA 3: Conversión de (F)/(M) a PLACEHOLDERS para bot específico (874910942490677270)
+  // Esto soluciona el caso de "Nidoran (F)..." -> Nidoran NIDORAN_FEMALE_PLACEHOLDER
   if (String(authorId) === NIDORAN_SPECIAL_ID) {
     // Reemplaza (F) o (M) por el marcador. El espacio al inicio es para que separe el nombre (ej: "Nidoran (F)" -> "Nidoran NIDORAN...")
     line = line.replace(/\s*\([Ff]\)/g, ' NIDORAN_FEMALE_PLACEHOLDER');
     line = line.replace(/\s*\([Mm]\)/g, ' NIDORAN_MALE_PLACEHOLDER');
   }
+
+  // Regla 4: Eliminar contenido dentro de corchetes 【】
   line = line.replace(/【.*?】/g, ''); 
+
+  // Resto de la limpieza
   line = line.replace(/<a?:[^>]+>/g, ''); // Elimina emotes/emojis de Discord (ej: <:_:948990686932389979>)
   line = line.replace(/:flag_[a-z]{2}:/gi, '');
-  line = line.replace(/[\[\]〈〉❨❩⦗]/g, '');
+  
+  // CORRECCIÓN DE SINTAXIS: Elimina los caracteres de corchete/símbolo restantes
+  line = line.replace(/[\[\]〈〉❨❩⦗]/g, ''); 
+  
+  // Elimina contenido dentro de paréntesis ()
+  // Esto es seguro ahora ya que (F) y (M) para Nidoran ya fueron reemplazados por el placeholder
   line = line.replace(/\([^)]*\)/g, ''); 
+  
   line = line.replace(/\*\*/g, '');
+  // Esta línea elimina el resto de símbolos/emojis
   line = line.replace(/[\u{1F300}-\u{1F6FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}]/gu, ''); 
+  
+  // ----------------------------------------------------
+  // PASO 5: Restauración de Símbolos de Género para Nidoran
+  // Restauramos el texto temporal a la forma Nidoran♂/♀ (SIN el selector de variación)
   line = line.replace(/NIDORAN_MALE_PLACEHOLDER/g, `Nidoran${MALE_SYM}`);
   line = line.replace(/NIDORAN_FEMALE_PLACEHOLDER/g, `Nidoran${FEMALE_SYM}`);
+  // ----------------------------------------------------
+
   line = line.replace(/\s+/g, ' ').trim();
   line = line.toLowerCase(); // Convierte todo a minúsculas para coincidencia
 
@@ -204,11 +240,13 @@ function extractPokemonName(raw, authorId) {
 
 function normalizeForComparison(name) {
   if (!name) return '';
+  // Eliminamos el selector de variación (U+FE0F) del nombre extraído Y de la clave de bloqueo
+  // para asegurar la coincidencia (e.g., "nidoran♀️" en lock_status vs "nidoran♀" extraído).
   const strippedName = String(name).replace(/\uFE0F/g, ''); 
   return strippedName.toLowerCase().trim().replace(/\s+/g, ' ');
 }
 
-// ========== FUNCIONES DE BLOQUEO/DESBLOQUEO (sin cambios) ==========
+// ========== FUNCIONES DE BLOQUEO/DESBLOQUEO ==========
 async function lockChannel(channel, hideChannel = false) {
   if (!process.env.POKETWO_ID || !/^\d{17,19}$/.test(process.env.POKETWO_ID)) {
     console.error("❌ FALLO CRÍTICO: ID de Pokétwo inválido o no configurado");
@@ -259,9 +297,11 @@ async function unlockChannel(channel) {
   try {
     if (channel.permissionOverwrites.cache.has(process.env.POKETWO_ID)) {
       try {
-        await channel.permissionOverwrites.delete(process.env.POKETWO_ID);
+        await channel.permissionOverwrites.edit(process.env.POKETWO_ID, {
+          SendMessages: true
+        });
       } catch (error) {
-        console.error('❌ Error al eliminar permisos de Pokétwo:', error);
+        console.error('❌ Error al editar permisos de Pokétwo:', error);
         return false;
       }
     }
@@ -429,8 +469,12 @@ client.on('messageCreate', async (message) => {
       
     
       // =========================================================================
+      // === FIX CRÍTICO: Carga el estado de bloqueo más reciente desde el disco ===
       const currentLockStatus = getLocksFromDisk();
+      // =========================================================================
+
       let matched = null;
+      // Itera sobre el estado recién cargado
       for (const key of Object.keys(currentLockStatus || {})) {
         // La clave de bloqueo también pasa por normalizeForComparison, eliminando el selector \uFE0F
         if (normalizeForComparison(key) === normalizedExtracted) {
@@ -691,9 +735,11 @@ client.on('interactionCreate', async (interaction) => {
     const command = commands.prefixCommands[commandName];
 
     if (command && command.handlePagination) {
+      // 🔑 CORRECCIÓN CRÍTICA: Se pasa paginationStates y generatePaginationButtons dentro de un objeto de dependencias
+      // Esto resuelve el error "paginationStates is undefined" dentro de locklist.js
       await command.handlePagination(interaction, state, {
-        paginationStates: paginationStates, 
-        generatePaginationButtons: generatePaginationButtons
+        paginationStates: paginationStates, // Usamos la variable global/local Collection
+        generatePaginationButtons: generatePaginationButtons // Usamos la función global
       });
     }
     return;
