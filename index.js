@@ -432,8 +432,7 @@ client.on('messageCreate', async (message) => {
     if (NAME_BOT_IDS.includes(message.author.id)) {
       const state = channelStates.get(message.channel.id);
       
-      // [LOG-NB] 1: Bot de Nombres detectado
-      console.log(`[LOG-NB] Mensaje de Name Bot detectado en #${message.channel.name}. Estado de espera (waiting): ${state?.waiting ? 'true' : 'false'}`);
+     
       
       const shouldTry = (state && state.waiting) || true;
 
@@ -442,8 +441,7 @@ client.on('messageCreate', async (message) => {
       
       const rawContent = message.content || '';
       
-      // [LOG-NB] 2: Contenido crudo
-      console.log(`[LOG-NB] Contenido crudo: ${rawContent}`);
+    
 
      
       const lower = rawContent.toLowerCase();
@@ -457,8 +455,7 @@ client.on('messageCreate', async (message) => {
       // --- CAMBIO AQUÍ: PASAR EL ID DEL AUTOR ---
       const extracted = extractPokemonName(rawContent, message.author.id);
       
-      // [LOG-NB] 3: Nombre extraído
-      console.log(`[LOG-NB] Nombre extraído (extractPokemonName): ${extracted}`);
+     
       
       if (!extracted) {
         if (state) channelStates.delete(message.channel.id);
@@ -468,9 +465,7 @@ client.on('messageCreate', async (message) => {
      
       const normalizedExtracted = normalizeForComparison(extracted);
       
-      // [LOG-NB] 4: Nombre normalizado
-      console.log(`[LOG-NB] Nombre normalizado para comparación: ${normalizedExtracted}`);
-
+    
       // =========================================================================
       // === FIX CRÍTICO: Carga el estado de bloqueo más reciente desde el disco ===
       const currentLockStatus = getLocksFromDisk();
@@ -482,7 +477,6 @@ client.on('messageCreate', async (message) => {
         // La clave de bloqueo también pasa por normalizeForComparison, eliminando el selector \uFE0F
         if (normalizeForComparison(key) === normalizedExtracted) {
           matched = [key, currentLockStatus[key]]; // Usa el estado recién cargado
-          // [LOG-NB] 5: Coincidencia encontrada
           
           break;
         }
@@ -491,8 +485,7 @@ client.on('messageCreate', async (message) => {
       
       if (!matched) {
         
-        // [LOG-NB] 6: No se encontró coincidencia
-        console.log(`[LOG-NB] ❌ No se encontró coincidencia en lockStatusData para: ${normalizedExtracted}`);
+       
         
         if (state) channelStates.delete(message.channel.id);
         return;
@@ -501,14 +494,12 @@ client.on('messageCreate', async (message) => {
       
       const [pokemonKey, status] = matched;
       if (!status || !status.is_locked) {
-        // [LOG-NB] Bloqueo no activo
-        console.log(`[LOG-NB] ⚠️ Coincidencia encontrada (${pokemonKey}) pero is_locked es false en lock_status.json.`);
+        
         if (state) channelStates.delete(message.channel.id);
         return;
       }
 
-      // [LOG-NB] Bloqueo inminente
-     
+      
       
       
       const cooldownTime = 30000;
@@ -516,12 +507,12 @@ client.on('messageCreate', async (message) => {
       if (cooldowns.has(cooldownKey)) {
         const expirationTime = cooldowns.get(cooldownKey) + cooldownTime;
         if (now < expirationTime) {
-          console.log(`[LOG-NB] ⏳ Bloqueo omitido: En enfriamiento (cooldown) para el canal. (Vence en ${Math.round((expirationTime - now) / 1000)}s)`);
+          
           if (state) channelStates.delete(message.channel.id);
           return;
         }
       } else {
-      
+   
       }
 
       try {
@@ -531,7 +522,7 @@ client.on('messageCreate', async (message) => {
           m.author.id === client.user.id && m.components && m.components.length > 0
         );
         
-        console.log(`[LOG-NB] Estado de advertencia (hasWarning): ${hasWarning}`);
+      
 
 
         if (!hasWarning) {
@@ -539,7 +530,7 @@ client.on('messageCreate', async (message) => {
           setTimeout(() => cooldowns.delete(cooldownKey), cooldownTime);
 
           const isPrivate = status.lock_type === 'private';
-          console.log(`[LOG-NB] Iniciando lockChannel(hideChannel: ${isPrivate})...`);
+         
           await lockChannel(message.channel, isPrivate);
           lockedChannels.set(message.channel.id, { type: status.lock_type, pokemon: pokemonKey });
           saveLockedChannels(lockedChannels);
@@ -578,7 +569,6 @@ client.on('messageCreate', async (message) => {
             timestamp: Date.now()
           });
           
-          // [LOG-NB] Bloqueo exitoso
           
 
 
@@ -597,7 +587,7 @@ client.on('messageCreate', async (message) => {
             }
           }
         } else {
-          console.log('[LOG-NB] 🚫 Bloqueo omitido: Ya existe un mensaje de advertencia (botón) en los últimos 5 mensajes.');
+          
         }
       } catch (error) {
         console.error(`❌ Error CRÍTICO en el proceso de bloqueo para ${pokemonKey}:`, error);
