@@ -483,7 +483,7 @@ client.on('messageCreate', async (message) => {
         if (normalizeForComparison(key) === normalizedExtracted) {
           matched = [key, currentLockStatus[key]]; // Usa el estado recién cargado
           // [LOG-NB] 5: Coincidencia encontrada
-          console.log(`[LOG-NB] ✅ Coincidencia EXCACTA encontrada con clave de bloqueo: ${key}`);
+          
           break;
         }
       }
@@ -508,7 +508,7 @@ client.on('messageCreate', async (message) => {
       }
 
       // [LOG-NB] Bloqueo inminente
-      console.log(`[LOG-NB] ✅ Bloqueo activo. Preparando bloqueo para ${pokemonKey} (${status.lock_type}) en #${message.channel.name}`);
+     
       
       
       const cooldownTime = 30000;
@@ -521,7 +521,7 @@ client.on('messageCreate', async (message) => {
           return;
         }
       } else {
-        console.log(`[LOG-NB] ✅ Cooldown listo. Procediendo con el bloqueo.`);
+      
       }
 
       try {
@@ -579,7 +579,7 @@ client.on('messageCreate', async (message) => {
           });
           
           // [LOG-NB] Bloqueo exitoso
-          console.log(`[LOG-NB] ✅ Bloqueo de canal exitoso para ${pokemonKey}`);
+          
 
 
           if (config.logChannel) {
