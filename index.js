@@ -295,11 +295,21 @@ async function unlockChannel(channel) {
   }
 
   try {
+    // CORRECCIÓN 1: Se asegura de que Pokétwo esté presente antes de intentar editar.
+    const poketwoMember = await channel.guild.members.fetch(process.env.POKETWO_ID).catch(() => null);
+    if (!poketwoMember) {
+      console.error(`❌ FALLO CRÍTICO: Pokétwo no está en el servidor (ID: ${process.env.POKETWO_ID})`);
+      return false;
+    }
+    // FIN CORRECCIÓN 1
+
     if (channel.permissionOverwrites.cache.has(process.env.POKETWO_ID)) {
       try {
+        // CORRECCIÓN 2: Edita a SendMessages: true, como se solicitó.
         await channel.permissionOverwrites.edit(process.env.POKETWO_ID, {
-          SendMessages: true
+          SendMessages: true 
         });
+        // FIN CORRECCIÓN 2
       } catch (error) {
         console.error('❌ Error al editar permisos de Pokétwo:', error);
         return false;
@@ -457,14 +467,14 @@ client.on('messageCreate', async (message) => {
       // --- CAMBIO AQUÍ: PASAR EL ID DEL AUTOR ---
       const extracted = extractPokemonName(rawContent, message.author.id);
       
-     
+    
       
       if (!extracted) {
         if (state) channelStates.delete(message.channel.id);
         return;
       }
 
-     
+      
       const normalizedExtracted = normalizeForComparison(extracted);
       
     
