@@ -1,30 +1,62 @@
+// locks.js v1.0.4 (Sincronización Visual Forzada)
 const { 
     EmbedBuilder, 
     PermissionsBitField, 
     ActionRowBuilder, 
     ButtonBuilder,   
-    ButtonStyle      
+    ButtonStyle,
+    Collection      
 } = require('discord.js');
 
-// === FUNCIÓN CLAVE: CREACIÓN DE BOTONES (Propia de locks.js) ===
+const ITEMS_PER_PAGE = 15; 
+const BUTTONS_PER_ROW = 5; 
+
+//=====createChannelLinkRows (Mismo)=====
+function createChannelLinkRows(currentItems, guildId, startItemIndex = 0) {
+    const rows = [];
+    let currentRow = new ActionRowBuilder();
+
+    currentItems.forEach((item, index) => {
+        const channelUrl = `https://discord.com/channels/${guildId}/${item.id}`;
+        const itemNumber = startItemIndex + index + 1;
+        
+        const button = new ButtonBuilder()
+            .setLabel(`#${itemNumber}`) 
+            .setStyle(ButtonStyle.Link) 
+            .setURL(channelUrl);
+        
+        currentRow.addComponents(button);
+
+        if (currentRow.components.length === BUTTONS_PER_ROW) {
+            rows.push(currentRow);
+            currentRow = new ActionRowBuilder();
+        }
+    });
+
+    if (currentRow.components.length > 0) {
+        rows.push(currentRow);
+    }
+    
+    return rows;
+}
+//==================================================
+
+//=====createPaginationRow (Mismo)=====
 function createPaginationRow(currentPage, totalPages, customPrefix) {
     const row = new ActionRowBuilder();
 
-    // Mostrar botones de navegación solo si hay más de una página
     if (totalPages > 1) {
         const isFirstPage = currentPage === 0;
         const isLastPage = currentPage === totalPages - 1;
 
-        // 1. Botón Anterior (Prev)
         row.addComponents(
             new ButtonBuilder()
-                .setCustomId(`${customPrefix}prev_page`)
+                .setCustomId(`${customPrefix}_prev_page`) 
                 .setLabel('⬅️')
                 .setStyle(ButtonStyle.Primary)
                 .setDisabled(isFirstPage)
         );
 
-        // 2. Botón de Información de Página (Pág X/Y)
         row.addComponents(
             new ButtonBuilder()
                 .setCustomId('page_info_locks_disabled') 
@@ -33,163 +65,270 @@ function createPaginationRow(currentPage, totalPages, customPrefix) {
                 .setDisabled(true)
         );
 
-        // 3. Botón Siguiente (Next)
         row.addComponents(
             new ButtonBuilder()
-                .setCustomId(`${customPrefix}next_page`)
+                .setCustomId(`${customPrefix}_next_page`) 
                 .setLabel('➡️')
                 .setStyle(ButtonStyle.Primary)
                 .setDisabled(isLastPage)
         );
-    } 
-    // 4. Botón Cerrar (Siempre se añade)
+    }
+
     row.addComponents(
         new ButtonBuilder()
-            .setCustomId(`${customPrefix}close_list`)
-            .setLabel('❌')
+            .setCustomId(`${customPrefix}_close_list`) 
+            .setLabel('❌ Cerrar')
             .setStyle(ButtonStyle.Danger)
     );
-    
+
     return row;
 }
+//==================================================
+
+//=====getLockedChannelsInGuild (Mismo)=====
+function getLockedChannelsInGuild(client, guildId, freshLockedChannelsCollection) {
+    
+    if (!freshLockedChannelsCollection || typeof freshLockedChannelsCollection.entries !== 'function') {
+        return []; 
+    }
+    
+    const lockedList = Array.from(freshLockedChannelsCollection.entries())
+        .map(([id, data]) => {
+            const channel = client.channels.cache.get(id); 
+            
+            if (!channel || channel.guild.id !== guildId) return null; 
+            
+            return {
+                id,
+                channelName: channel.name,
+                pokemon: data.pokemon || 'Desconocido',
+                type: data.type === 'private' ? 'Privado' : 'Público'
+            };
+        })
+        .filter(item => item !== null) 
+        .sort((a, b) => {
+            if (a.type === 'Privado' && b.type !== 'Privado') return -1;
+            if (a.type !== 'Privado' && b.type === 'Privado') return 1;
+            return a.pokemon.localeCompare(b.pokemon);
+        });
+
+    return lockedList;
+}
+//==================================================
+
+//=====generateListOutput (Mismo)=====
+function generateListOutput(client, guildId, state, freshLockedChannelsCollection) {
+    
+    const lockedList = getLockedChannelsInGuild(client, guildId, freshLockedChannelsCollection);
+    
+    const totalPages = Math.ceil(lockedList.length / ITEMS_PER_PAGE);
+    
+    let newPage = state.currentPage;
+    
+    if (newPage >= totalPages && totalPages > 0) {
+        newPage = totalPages - 1;
+    } else if (totalPages === 0) {
+        newPage = 0; 
+    }
+    
+    state.totalPages = totalPages;
+    state.currentPage = newPage;
+    
+    const start = state.currentPage * ITEMS_PER_PAGE;
+    const end = start + ITEMS_PER_PAGE;
+    const currentItems = lockedList.slice(start, end);
+    
+    const embed = new EmbedBuilder()
+        .setColor(0xEE82EE) 
+        .setTitle(`📋 Bloqueos Locales (${lockedList.length} Canales)`)
+        .setDescription(
+            lockedList.length === 0 
+                ? 'No hay canales bloqueados actualmente en este servidor.'
+                : currentItems.map((item, index) =>
+                      `**[#${start + index + 1}]** 🔒 **${item.pokemon}** (Canal #${item.channelName}) - Tipo: ${item.type}`
+                  ).join('\n') +
+                  `\n\nPresiona el botón \`#1\`, \`#2\`, etc. para ir directamente al canal.` 
+        )
+        .setFooter({ text: totalPages > 0 ? `Página ${state.currentPage + 1} de ${totalPages}` : `Página 0 de 0` });
+
+    const linkRows = createChannelLinkRows(currentItems, guildId, start);
+    const paginationRow = createPaginationRow(state.currentPage, state.totalPages, state.customPrefix);
+    
+    const components = [...linkRows, paginationRow];
+
+    return { embed, components, shouldDelete: lockedList.length === 0 };
+}
+//==================================================
+
+//=====updateActiveLists (MODIFICADA: Añade Timestamp para forzar el renderizado)=====
+async function updateActiveLists(client, paginationStates, lockedChannels) { 
+    
+    const messagesToUpdate = [];
+
+    for (const [messageId, state] of paginationStates) {
+        if (state.commandName === 'locks') { 
+            messagesToUpdate.push({ 
+                messageId, 
+                channelId: state.channelId, 
+                guildId: state.guildId 
+            });
+        }
+    }
+
+    for (const { messageId, channelId, guildId } of messagesToUpdate) {
+        const state = paginationStates.get(messageId);
+        if (!state) continue;
+
+        try {
+            const channel = client.channels.cache.get(channelId);
+            if (!channel) {
+                paginationStates.delete(messageId);
+                continue;
+            }
+            const message = await channel.messages.fetch(messageId).catch(() => null);
+            if (!message) {
+                paginationStates.delete(messageId);
+                continue;
+            }
+            
+            // Genera la salida con la data fresca (lockedChannels)
+            const { embed, components, shouldDelete } = generateListOutput(
+                client, 
+                guildId, 
+                state, 
+                lockedChannels
+            );
+
+            // Importante: Volver a guardar el estado actualizado (solo con paginación)
+            paginationStates.set(messageId, state);
+
+            if (shouldDelete) {
+                await message.delete().catch(() => {});
+                paginationStates.delete(messageId);
+            } else {
+                
+                // 🔑 AJUSTE V1.0.4: Añadir un timestamp para forzar a Discord a ver el embed como 'nuevo'.
+                embed.setTimestamp(Date.now()); 
+
+                await message.edit({ embeds: [embed], components: components })
+                    .catch(error => {
+                        if (error.code === 10008 || error.code === 50001) { 
+                            paginationStates.delete(messageId);
+                        } else {
+                            console.error(`❌ Error al editar mensaje locks (sincronización):`, error.message);
+                        }
+                    });
+            }
+        } catch (error) {
+            console.error(`❌ Error general al actualizar mensaje locks (${messageId}). Eliminando estado:`, error.message);
+            paginationStates.delete(messageId);
+        }
+    }
+}
+//==================================================
+
 
 module.exports = {
-    name: 'locks', // Nombre del comando: !locks
-    description: 'Muestra los canales bloqueados SOLO en este servidor.',
-    // 🔑 Se elimina generatePaginationButtons
+    name: 'locks', 
+    description: 'Muestra los canales bloqueados SOLO en este servidor, con botones de navegación rápida.',
+    
+    //=====execute (Mismo)=====
     async execute(client, message, args, { lockedChannels, paginationStates }) { 
-        // Solo administradores pueden usar este comando
         if (!message.member.permissions.has(PermissionsBitField.Flags.Administrator)) {
             return message.reply('❌ ¡No tienes los permisos para usar este comando!');
         }
-
-        try {
-            // Filtrar solo canales que existen en el Gremio/Servidor actual
-            const lockedList = Array.from(lockedChannels.entries())
-                .map(([id, data]) => {
-                    // Busca el canal usando el caché del Gremio actual (message.guild.channels.cache)
-                    const channel = message.guild.channels.cache.get(id); 
-                    return channel ? {
-                        id,
-                        channelName: channel.name,
-                        pokemon: data.pokemon || 'Desconocido',
-                        type: data.type === 'private' ? 'Privado' : 'Público'
-                    } : null;
-                })
-                .filter(item => item !== null) // Eliminar los canales que no pertenecen a este servidor
-                .sort((a, b) => a.pokemon.localeCompare(b.pokemon));
-
-            if (lockedList.length === 0) {
-                return message.reply('❌ No hay canales bloqueados actualmente en este servidor.');
-            }
-
-            const itemsPerPage = 5;
-            const totalPages = Math.ceil(lockedList.length / itemsPerPage);
-            const prefix = 'locks_'; // Prefijo para los botones de paginación
-
-            const generateEmbed = (currentPage) => {
-                const start = currentPage * itemsPerPage;
-                const end = start + itemsPerPage;
-                const currentItems = lockedList.slice(start, end);
-
-                const embed = new EmbedBuilder()
-                    .setColor(0xEE82EE) // Un color distinto, como el violeta
-                    .setTitle(`📋 Canales Bloqueados Localmente (${lockedList.length})`)
-                    .setFooter({ text: `Página ${currentPage + 1} de ${totalPages}` });
-
-                embed.setDescription(
-                    currentItems.length === 0 
-                        ? 'No hay canales bloqueados en esta página.'
-                        : currentItems.map(item => 
-                            `🔒 **${item.pokemon}** (Canal #${item.channelName})\n` +
-                            `• Tipo: ${item.type}\n` +
-                            `• [Ir al Canal](https://discord.com/channels/${message.guild.id}/${item.id})`
-                          ).join('\n\n')
-                );
-
-                return embed;
-            };
-            
-            const initialState = { 
-                currentPage: 0,
-                lockedList,
-                itemsPerPage,
-                totalPages,
-                messageAuthorId: message.author.id,
-                commandName: 'locks', // Nombre del nuevo comando
-                customPrefix: prefix
-            };
-            
-            // 🔑 Lógica: Siempre se envía el ActionRow para el botón X.
-            const componentsToSend = [createPaginationRow(initialState.currentPage, totalPages, prefix)];
-
-            const reply = await message.reply({ 
-                embeds: [generateEmbed(initialState.currentPage)], 
-                components: componentsToSend, 
-                fetchReply: true
-            });
-
-            paginationStates.set(reply.id, initialState);
-        } catch (error) {
-            console.error('❌ Error en comando locks:', error);
-            message.reply('❌ Ocurrió un error al mostrar la lista de bloqueos del servidor.');
-        }
-    },
-    
-    // 🔑 handlePagination: Se corrige la firma y el uso de botones
-    handlePagination: async (interaction, state, { paginationStates }) => {
-        if (!interaction.customId.startsWith(state.customPrefix)) return;
         
-        // Verificar si la interacción ha expirado 
-        if (!paginationStates.has(interaction.message.id)) {
-            return interaction.update({
-                components: [], // Eliminar botones
-                content: '⌛ Esta interacción ha expirado (1 minuto)',
-                embeds: []
-            }).catch(() => {});
+        const customPrefix = 'locks'; 
+
+        const initialState = { 
+            currentPage: 0,
+            itemsPerPage: ITEMS_PER_PAGE,
+            messageAuthorId: message.author.id,
+            commandName: 'locks', 
+            customPrefix: customPrefix,
+            guildId: message.guild.id, 
+            channelId: message.channel.id,
+            timestamp: Date.now()
+        };
+        
+        const { embed, components, shouldDelete } = generateListOutput(
+            client, 
+            message.guild.id, 
+            initialState, 
+            lockedChannels 
+        );
+        
+        if (shouldDelete) {
+            return message.reply('❌ No hay canales bloqueados actualmente en este servidor.');
         }
 
-        if (state.messageAuthorId !== interaction.user.id) {
-            return interaction.reply({
-                content: '❌ Solo el autor del comando puede interactuar con esta paginación.',
-                ephemeral: true
-            });
-        }
-
-        if (interaction.customId === `${state.customPrefix}close_list`) {
-            paginationStates.delete(interaction.message.id);
-            return interaction.message.delete().catch(() => interaction.update({ components: [] }));
-        }
-
-        // Lógica de navegación
-        if (interaction.customId === `${state.customPrefix}prev_page` && state.currentPage > 0) {
-            state.currentPage--;
-        } else if (interaction.customId === `${state.customPrefix}next_page` && state.currentPage < state.totalPages - 1) {
-            state.currentPage++;
-        } else {
-             return interaction.deferUpdate(); 
-        }
-
-        const start = state.currentPage * state.itemsPerPage;
-        const end = start + state.itemsPerPage;
-        const currentItems = state.lockedList.slice(start, end);
-
-        const embed = new EmbedBuilder()
-            .setColor(0xEE82EE)
-            .setTitle(`📋 Canales Bloqueados Localmente (${state.lockedList.length})`)
-            .setDescription(
-                currentItems.map(item => 
-                    `🔒 **${item.pokemon}** (Canal #${item.channelName})\n` +
-                    `• Tipo: ${item.type}\n` +
-                    `• [Ir al Canal](https://discord.com/channels/${interaction.guild.id}/${item.id})`
-                ).join('\n\n')
-            )
-            .setFooter({ text: `Página ${state.currentPage + 1} de ${state.totalPages}` });
-
-        await interaction.update({ 
+        const reply = await message.reply({ 
             embeds: [embed], 
-            // 🔑 Usamos la función local robusta para actualizar los botones
-            components: [createPaginationRow(state.currentPage, state.totalPages, state.customPrefix)] 
-        }).catch(console.error);
-    }
+            components: components, 
+            fetchReply: true
+        });
+
+        paginationStates.set(reply.id, initialState);
+    },
+    //==================================================
+    
+    //=====handlePagination (Mismo)=====
+    async handlePagination(interaction, state, dependencies) {
+        
+        const { paginationStates, lockedChannels } = dependencies;
+        
+        await interaction.deferUpdate().catch(() => {});
+        
+        // Cierre de lista
+        if (interaction.customId === `${state.customPrefix}_close_list`) {
+            paginationStates.delete(interaction.message.id);
+            return interaction.message.delete().catch(() => {});
+        }
+        
+        let newPage = state.currentPage;
+        let shouldEdit = false;
+
+        // Lógica de paginación
+        if (interaction.customId === `${state.customPrefix}_prev_page` && state.currentPage > 0) {
+            newPage = state.currentPage - 1;
+            shouldEdit = true;
+        } else if (interaction.customId === `${state.customPrefix}_next_page` && state.currentPage < state.totalPages - 1) {
+            newPage = state.currentPage + 1;
+            shouldEdit = true;
+        } else {
+             return; 
+        }
+
+        state.currentPage = newPage;
+        
+        const { embed, components, shouldDelete } = generateListOutput(
+            interaction.client, 
+            interaction.guild.id, 
+            state, 
+            lockedChannels 
+        );
+
+        if (shouldDelete) {
+            paginationStates.delete(interaction.message.id);
+            return interaction.message.delete().catch(() => {});
+        }
+
+        paginationStates.set(interaction.message.id, state);
+        
+        await interaction.message.edit({ 
+            embeds: [embed], 
+            components: components
+        }).catch(error => {
+            if (error.code === 10008 || error.code === 50001) { 
+                paginationStates.delete(interaction.message.id);
+            } else {
+                console.error('❌ Error al paginar locks:', error.message);
+            }
+        });
+    },
+    //==================================================
+    
+    //=====updateActiveListsExport=====
+    updateActiveLists: updateActiveLists
+    //==================================================
 };
