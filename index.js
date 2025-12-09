@@ -321,7 +321,7 @@ const paginationStates = client._paginationStates;
 
 // =========================================================================
 
-client.on('ready', async () => { // Corregido 'clientReady' a 'ready' (más común y compatible)
+client.on('clientReady', async () => { 
     if (!client.user) return console.error("❌ Cliente no disponible en el evento ready.");
 
     const totalGuilds = client.guilds.cache.size;
