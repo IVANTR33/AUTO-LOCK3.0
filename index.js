@@ -1,4 +1,3 @@
-// index.js version 1.0.6 (Sincronización de locks y Corrección de Sintaxis)
 const {
     Client,
     GatewayIntentBits,
@@ -30,9 +29,12 @@ for (const file of commandFiles) {
 
 const SPAWN_ROLE_NAME = "Acceso Spawns";
 const PREFIX = '!';
-const UPDATE_INTERVAL_MS = 2000; // Constante introducida (2 segundos)
 const requiredEnvVars = ['DISCORD_TOKEN', 'POKE_NAME_ID', 'POKETWO_ID'];
+
+// -------------------------------------------------------------------
+// ✅ CORRECCIÓN DE LECTURA DE ENV: Se usa process.env[env] en lugar de process.env.env
 const missingVars = requiredEnvVars.filter(env => !process.env[env]);
+// -------------------------------------------------------------------
 
 if (missingVars.length > 0) {
     console.error(`❌ Faltan variables de entorno: ${missingVars.join(', ')}`);
@@ -42,8 +44,8 @@ if (missingVars.length > 0) {
 const ADDITIONAL_NAME_IDS = [
     process.env.POKE_NAME_ID_2,
     process.env.POKE_NAME_ID_3,
-    process.env.POKE_NAME_ID_4, 
-    process.env.POKE_NAME_ID_5 
+    process.env.POKE_NAME_ID_4,
+    process.env.POKE_NAME_ID_5
 ];
 
 const NAME_BOT_IDS = Array.from(new Set([
@@ -53,7 +55,7 @@ const NAME_BOT_IDS = Array.from(new Set([
 
 const configPath = path.join(__dirname, 'config.json');
 let config = {
-    mentionRoles: {}, 
+    mentionRoles: {},
     logChannel: null
 };
 
@@ -81,7 +83,7 @@ function saveConfig() {
 loadConfig();
 
 const lockStatusPath = path.join(__dirname, 'lock_status.json');
-let lockStatusData = {}; 
+let lockStatusData = {};
 
 function loadLockStatus() {
     try {
@@ -141,26 +143,23 @@ function saveLockedChannels(lockedChannels) {
     }
 }
 
-const lockedChannels = loadLockedChannels();
-
 function extractPokemonName(raw, authorId) {
     if (!raw) return null;
     
     let line = String(raw).split('\n')[0].trim();
     
-    const SPECIAL_BOT_ID = '854233015475109888'; 
-    const NIDORAN_SPECIAL_ID = '874910942490677270'; 
+    const SPECIAL_BOT_ID = '854233015475109888';
+    const NIDORAN_SPECIAL_ID = '874910942490677270';
     
-    const FEMALE_SYM = '\u2640'; 
-    const MALE_SYM = '\u2642'; 
-    const VARIATION_SELECTOR = '\uFE0F'; 
+    const FEMALE_SYM = '\u2640';
+    const MALE_SYM = '\u2642';
+    const VARIATION_SELECTOR = '\uFE0F';
 
-    line = line.replace(new RegExp(`nidoran\\s*${MALE_SYM}${VARIATION_SELECTOR}?`, 'gi'), 'NIDORAN_MALE_PLACEHOLDER'); 
+    line = line.replace(new RegExp(`nidoran\\s*${MALE_SYM}${VARIATION_SELECTOR}?`, 'gi'), 'NIDORAN_MALE_PLACEHOLDER');
     line = line.replace(new RegExp(`nidoran\\s*${FEMALE_SYM}${VARIATION_SELECTOR}?`, 'gi'), 'NIDORAN_FEMALE_PLACEHOLDER');
-    
 
     if (line.startsWith('##')) {
-        line = line.substring(2).trim(); 
+        line = line.substring(2).trim();
     }
 
     if (String(authorId) === SPECIAL_BOT_ID) {
@@ -184,31 +183,28 @@ function extractPokemonName(raw, authorId) {
         line = line.replace(/\s*\([Mm]\)/g, ' NIDORAN_MALE_PLACEHOLDER');
     }
 
-    line = line.replace(/【.*?】/g, ''); 
-
-    line = line.replace(/<a?:[^>]+>/g, ''); 
+    line = line.replace(/【.*?】/g, '');
+    line = line.replace(/<a?:[^>]+>/g, '');
     line = line.replace(/:flag_[a-z]{2}:/gi, '');
     
-    line = line.replace(/[\[\]〈〉❨❩⦗]/g, ''); 
-    
-    line = line.replace(/\([^)]*\)/g, ''); 
+    line = line.replace(/[\[\]〈〉❨❩⦗]/g, '');
+    line = line.replace(/\([^)]*\)/g, '');
     
     line = line.replace(/\*\*/g, '');
-    line = line.replace(/[\u{1F300}-\u{1F6FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}]/gu, ''); 
+    line = line.replace(/[\u{1F300}-\u{1F6FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}]/gu, '');
     
     line = line.replace(/NIDORAN_MALE_PLACEHOLDER/g, `Nidoran${MALE_SYM}`);
     line = line.replace(/NIDORAN_FEMALE_PLACEHOLDER/g, `Nidoran${FEMALE_SYM}`);
-    
 
     line = line.replace(/\s+/g, ' ').trim();
-    line = line.toLowerCase(); 
+    line = line.toLowerCase();
 
     return line || null;
 }
 
 function normalizeForComparison(name) {
     if (!name) return '';
-    const strippedName = String(name).replace(/\uFE0F/g, ''); 
+    const strippedName = String(name).replace(/\uFE0F/g, '');
     return strippedName.toLowerCase().trim().replace(/\s+/g, ' ');
 }
 
@@ -269,7 +265,7 @@ async function unlockChannel(channel) {
         if (channel.permissionOverwrites.cache.has(process.env.POKETWO_ID)) {
             try {
                 await channel.permissionOverwrites.edit(process.env.POKETWO_ID, {
-                    SendMessages: true 
+                    SendMessages: true
                 });
             } catch (error) {
                 console.error('❌ Error al editar permisos de Pokétwo:', error);
@@ -294,21 +290,41 @@ const client = new Client({
 const channelStates = new Map();
 const cooldowns = new Map();
 const lockMessages = new Map();
+const lockedChannels = loadLockedChannels();
+
+function generatePaginationButtons(state) {
+    const buttons = new ActionRowBuilder();
+    const isFirstPage = state.currentPage === 1;
+    const isLastPage = state.currentPage === state.totalPages;
+
+    buttons.addComponents(
+        new ButtonBuilder()
+            .setCustomId(`${state.customIdPrefix}_prev_page`)
+            .setLabel('⬅️ Anterior')
+            .setStyle(ButtonStyle.Secondary)
+            .setDisabled(isFirstPage),
+        new ButtonBuilder()
+            .setCustomId(`${state.customIdPrefix}_close_list`)
+            .setLabel('❌ Cerrar')
+            .setStyle(ButtonStyle.Danger),
+        new ButtonBuilder()
+            .setCustomId(`${state.customIdPrefix}_next_page`)
+            .setLabel('Siguiente ➡️')
+            .setStyle(ButtonStyle.Secondary)
+            .setDisabled(isLastPage),
+    );
+    return buttons;
+}
 
 client._paginationStates = client._paginationStates || new Collection();
 const paginationStates = client._paginationStates;
 
-
-// ===================================
-// ========== EVENTO LISTO (clientReady) ==========
-// ===================================
-
-client.on('clientReady', async () => { 
-    if (!client.user) return console.error("❌ Cliente no disponible en el evento clientReady.");
+client.on('clientReady', async () => {
+    if (!client.user) return console.error("❌ Cliente no disponible en el evento ready.");
     
     const totalGuilds = client.guilds.cache.size;
     const numberedChannels = client.guilds.cache.reduce((acc, guild) => {
-        return acc + guild.channels.cache.filter(ch => 
+        return acc + guild.channels.cache.filter(ch =>
             /^\d{1,3}$/.test(ch.name) && parseInt(ch.name) <= 450
         ).size;
     }, 0);
@@ -318,27 +334,19 @@ client.on('clientReady', async () => {
     console.log(`
 ╔════════════════════════════════════════════╗
 ║                                            
-║   ✅ ${client.user.tag} En Línea 🟢           
+║    ✅ ${client.user.tag} En Línea 🟢       
 ║                                            
 ╠════════════════════════════════════════════╣
-║   🗄️  Servidores: ${totalGuilds.toString().padEnd(8)} 
-║   📊  Canales totales: ${numberedChannels.toString().padEnd(8)} 
-║   🟢  Canales libres: ${freeChannels.toString().padEnd(9)} 
-║   🚫  Canales bloqueados: ${lockedChannels.size.toString().padEnd(5)} 
+║                                            
+║    🗄️  Servidores: ${totalGuilds.toString().padEnd(8)} 
+║    📊  Canales totales: ${numberedChannels.toString().padEnd(8)} 
+║    🟢  Canales libres: ${freeChannels.toString().padEnd(9)} 
+║    🚫  Canales bloqueados: ${lockedChannels.size.toString().padEnd(5)} 
 ║
+║                                            
 ╚════════════════════════════════════════════╝
     `);
-    
-    // ========== BUCLE DE ACTUALIZACIÓN PERIÓDICA ==========
-    setInterval(() => {
-        updateListEmbeds(client).catch(console.error);
-    }, UPDATE_INTERVAL_MS).unref?.(); 
-    
 });
-
-// ===================================
-
-// ========== MANEJO DE MENSAJES ==========
 
 client.on('messageCreate', async (message) => {
     try {
@@ -350,7 +358,7 @@ client.on('messageCreate', async (message) => {
             try {
                 if (commands.prefixCommands[commandName]) {
                     await commands.prefixCommands[commandName].execute(client, message, args, {
-                        lockStatusData, 
+                        lockStatusData,
                         saveLockStatus,
                         lockedChannels,
                         lockMessages,
@@ -362,7 +370,8 @@ client.on('messageCreate', async (message) => {
                         lockChannel,
                         unlockChannel,
                         saveLockedChannels,
-                        paginationStates: client._paginationStates
+                        paginationStates: client._paginationStates,
+                        generatePaginationButtons
                     });
                 }
             } catch (error) {
@@ -400,6 +409,7 @@ client.on('messageCreate', async (message) => {
         if (NAME_BOT_IDS.includes(message.author.id)) {
             const state = channelStates.get(message.channel.id);
             
+            
             const shouldTry = (state && state.waiting) || true;
 
             if (!shouldTry) return;
@@ -430,15 +440,17 @@ client.on('messageCreate', async (message) => {
             
             const normalizedExtracted = normalizeForComparison(extracted);
             
-            
+        
             
             const currentLockStatus = getLocksFromDisk();
             
 
             let matched = null;
+            
             for (const key of Object.keys(currentLockStatus || {})) {
+                
                 if (normalizeForComparison(key) === normalizedExtracted) {
-                    matched = [key, currentLockStatus[key]]; 
+                    matched = [key, currentLockStatus[key]];
                     
                     break;
                 }
@@ -514,6 +526,7 @@ client.on('messageCreate', async (message) => {
                             .setStyle(ButtonStyle.Danger)
                     );
 
+                
                     const mentionRoleId = config.mentionRoles[message.guild.id];
                     const mention = mentionRoleId ? ` <@&${mentionRoleId}>` : '';
                     const messageContent = isPrivate
@@ -531,10 +544,9 @@ client.on('messageCreate', async (message) => {
                         timestamp: Date.now()
                     });
                     
-                    // CORRECCIÓN CLAVE: Llamar a la actualización inmediata al bloquear un canal.
-                    await updateListEmbeds(client);
                     
-                    
+
+
                     if (config.logChannel) {
                         const logChannel = client.channels.cache.get(config.logChannel);
                         if (logChannel) {
@@ -567,35 +579,14 @@ client.on('messageCreate', async (message) => {
     }
 });
 
-// ========== FUNCIONES DE ACTUALIZACIÓN DE ESTADO (CORREGIDA: Se incluye 'locks') ==========
-
-async function updateListEmbeds(client) {
-   
-    const commandsToUpdate = ['ls', 'gls', 'locks', 'locklist']; 
-    
-    for (const cmdName of commandsToUpdate) {
-        const command = commands.prefixCommands[cmdName];
-        
-        
-        if (command && typeof command.updateActiveLists === 'function') {
-            try {
-               
-                await command.updateActiveLists(client, client._paginationStates, lockedChannels);
-            } catch (updateError) {
-                console.error(`❌ Error al ejecutar actualización de lista para ${cmdName}:`, updateError.message);
-                
-            }
-        }
-    }
-}
-
-// ========== INTERACCIONES ==========
 client.on('interactionCreate', async (interaction) => {
     if (!interaction.isButton()) return;
 
-    // === BOTONES DE DESBLOQUEO ===
     if (interaction.customId.startsWith('unlock_')) {
         try {
+            // CORRECCIÓN DE INTERACCIÓN: Deferir inmediatamente para evitar el error 10062
+            await interaction.deferUpdate();
+
             const channelId = interaction.customId.split('_')[1];
             const channel = await client.channels.fetch(channelId);
             const lockInfo = lockedChannels.get(channelId);
@@ -603,28 +594,28 @@ client.on('interactionCreate', async (interaction) => {
             const member = await interaction.guild.members.fetch(interaction.user.id);
             const spawnRole = member.roles.cache.find(r => r.name === SPAWN_ROLE_NAME);
 
+            // Usar followUp después de deferUpdate
+
             if (lockInfo?.type === 'private' && !member.permissions.has(PermissionsBitField.Flags.ManageChannels)) {
-                return interaction.reply({
+                return interaction.followUp({
                     content: '❌ Solo staff puede desbloquear canales privados',
                     ephemeral: true
                 });
             }
 
             if (!spawnRole && !member.permissions.has(PermissionsBitField.Flags.ManageChannels)) {
-                return interaction.reply({
+                return interaction.followUp({
                     content: `❌ Necesitas el rol "${SPAWN_ROLE_NAME}" o permisos de staff`,
                     ephemeral: true
                 });
             }
             
-            await interaction.deferUpdate();
-
             
             try {
                 await interaction.message.delete();
-                lockMessages.delete(channelId); 
+                lockMessages.delete(channelId);
             } catch (error) {
-                
+                console.error('❌ Error al borrar mensaje de bloqueo/interacción:', error);
             }
 
             const unlockSuccess = await unlockChannel(channel);
@@ -642,15 +633,12 @@ client.on('interactionCreate', async (interaction) => {
                         ViewChannel: true
                     });
                 } catch (error) {
-                    
+                    console.error('❌ Error al actualizar permisos del rol:', error);
                 }
             }
 
             lockedChannels.delete(channelId);
             saveLockedChannels(lockedChannels);
-            
-            // Llama a la función corregida updateListEmbeds
-            await updateListEmbeds(client); 
 
             await channel.send({
                 content: `✅ Canal desbloqueado por <@${interaction.user.id}>`,
@@ -676,9 +664,11 @@ client.on('interactionCreate', async (interaction) => {
                         ]
                     }).catch(console.error);
                 }
-            }  
+            }
         } catch (error) {
             console.error('❌ Error en interacción de desbloqueo:', error);
+            // Si el error ocurrió ANTES del deferUpdate, esto fallará. Si ocurrió DESPUÉS, funcionará.
+            // Para mayor seguridad, si la interacción no fue respondida/diferida, followUp lanzará InteractionNotReplied, que es capturado por unhandledRejection.
             interaction.followUp({
                 content: '❌ Ocurrió un error al desbloquear',
                 ephemeral: true
@@ -687,11 +677,10 @@ client.on('interactionCreate', async (interaction) => {
         return;
     }
 
-    // === BOTONES DE LB (lb command interactions) ===
     else if (interaction.customId.startsWith('bl_')) {
-        const command = commands.prefixCommands['lb']; 
+        const command = commands.prefixCommands['lb'];
         if (command && command.handleInteraction) {
-            await command.handleInteraction(interaction, { 
+            await command.handleInteraction(interaction, {
                 client,
                 paginationStates: client._paginationStates || new Collection(),
                 lockedChannels
@@ -700,7 +689,6 @@ client.on('interactionCreate', async (interaction) => {
         return;
     }
 
-    // === BOTONES DE PAGINACIÓN (TODOS LOS COMANDOS: ls, gls, locks) ===
     else if (
         interaction.customId.includes('_prev_page') ||
         interaction.customId.includes('_next_page') ||
@@ -722,41 +710,14 @@ client.on('interactionCreate', async (interaction) => {
 
         if (command && command.handlePagination) {
             await command.handlePagination(interaction, state, {
-                paginationStates: paginationStates, 
-                lockedChannels: lockedChannels // Se asegura que esta dependencia se pase
-            });
-        }
-        return;
-    }
-    else if (interaction.customId.startsWith('help_')) { 
-        const state = paginationStates.get(interaction.message.id);
-        
-        if (!state) {
-            return interaction.reply({
-                content: '❌ Esta interacción ha expirado o no se encontró su estado. Vuelve a ejecutar `!help`.',
-                flags: 64
-            }).catch(() => {});
-        }
-
-        if (state.messageAuthorId !== interaction.user.id) {
-            return interaction.reply({
-                content: '❌ Solo el autor del comando puede interactuar con este menú.',
-                flags: 64
-            }).catch(() => {});
-        }
-
-        const command = commands.prefixCommands['help'];
-
-        if (command && command.handleInteraction) {
-            await command.handleInteraction(interaction, state, {
                 paginationStates: paginationStates,
+                generatePaginationButtons: generatePaginationButtons
             });
         }
         return;
     }
 });
 
-// ========== MANEJO DE ERRORES ==========
 process.on('unhandledRejection', error => {
     console.error('❌ Rechazo no controlado:', error);
 });
@@ -766,7 +727,6 @@ process.on('uncaughtException', error => {
     process.exit(1);
 });
 
-// ========== INICIAR BOT ==========
 client.login(process.env.DISCORD_TOKEN).catch(error => {
     console.error('❌ Error al iniciar sesión:', error);
     process.exit(1);
