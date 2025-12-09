@@ -1,4 +1,3 @@
-// index.js version 1.0.6 (Sincronización de locks y Corrección de Sintaxis)
 const {
     Client,
     GatewayIntentBits,
@@ -30,7 +29,7 @@ for (const file of commandFiles) {
 
 const SPAWN_ROLE_NAME = "Acceso Spawns";
 const PREFIX = '!';
-const UPDATE_INTERVAL_MS = 2000; // Constante introducida (2 segundos)
+const UPDATE_INTERVAL_MS = 2000;
 const requiredEnvVars = ['DISCORD_TOKEN', 'POKE_NAME_ID', 'POKETWO_ID'];
 const missingVars = requiredEnvVars.filter(env => !process.env[env]);
 
@@ -42,8 +41,8 @@ if (missingVars.length > 0) {
 const ADDITIONAL_NAME_IDS = [
     process.env.POKE_NAME_ID_2,
     process.env.POKE_NAME_ID_3,
-    process.env.POKE_NAME_ID_4, 
-    process.env.POKE_NAME_ID_5 
+    process.env.POKE_NAME_ID_4,
+    process.env.POKE_NAME_ID_5
 ];
 
 const NAME_BOT_IDS = Array.from(new Set([
@@ -53,7 +52,7 @@ const NAME_BOT_IDS = Array.from(new Set([
 
 const configPath = path.join(__dirname, 'config.json');
 let config = {
-    mentionRoles: {}, 
+    mentionRoles: {},
     logChannel: null
 };
 
@@ -81,7 +80,7 @@ function saveConfig() {
 loadConfig();
 
 const lockStatusPath = path.join(__dirname, 'lock_status.json');
-let lockStatusData = {}; 
+let lockStatusData = {};
 
 function loadLockStatus() {
     try {
@@ -145,22 +144,22 @@ const lockedChannels = loadLockedChannels();
 
 function extractPokemonName(raw, authorId) {
     if (!raw) return null;
-    
-    let line = String(raw).split('\n')[0].trim();
-    
-    const SPECIAL_BOT_ID = '854233015475109888'; 
-    const NIDORAN_SPECIAL_ID = '874910942490677270'; 
-    
-    const FEMALE_SYM = '\u2640'; 
-    const MALE_SYM = '\u2642'; 
-    const VARIATION_SELECTOR = '\uFE0F'; 
 
-    line = line.replace(new RegExp(`nidoran\\s*${MALE_SYM}${VARIATION_SELECTOR}?`, 'gi'), 'NIDORAN_MALE_PLACEHOLDER'); 
+    let line = String(raw).split('\n')[0].trim();
+
+    const SPECIAL_BOT_ID = '854233015475109888';
+    const NIDORAN_SPECIAL_ID = '874910942490677270';
+
+    const FEMALE_SYM = '\u2640';
+    const MALE_SYM = '\u2642';
+    const VARIATION_SELECTOR = '\uFE0F';
+
+    line = line.replace(new RegExp(`nidoran\\s*${MALE_SYM}${VARIATION_SELECTOR}?`, 'gi'), 'NIDORAN_MALE_PLACEHOLDER');
     line = line.replace(new RegExp(`nidoran\\s*${FEMALE_SYM}${VARIATION_SELECTOR}?`, 'gi'), 'NIDORAN_FEMALE_PLACEHOLDER');
-    
+
 
     if (line.startsWith('##')) {
-        line = line.substring(2).trim(); 
+        line = line.substring(2).trim();
     }
 
     if (String(authorId) === SPECIAL_BOT_ID) {
@@ -178,37 +177,29 @@ function extractPokemonName(raw, authorId) {
     if (line.indexOf('—') !== -1) {
         line = line.split('—')[0].trim();
     }
-    
+
     if (String(authorId) === NIDORAN_SPECIAL_ID) {
         line = line.replace(/\s*\([Ff]\)/g, ' NIDORAN_FEMALE_PLACEHOLDER');
         line = line.replace(/\s*\([Mm]\)/g, ' NIDORAN_MALE_PLACEHOLDER');
     }
-
-    line = line.replace(/【.*?】/g, ''); 
-
-    line = line.replace(/<a?:[^>]+>/g, ''); 
+    line = line.replace(/【.*?】/g, '');
+    line = line.replace(/<a?:[^>]+>/g, '');
     line = line.replace(/:flag_[a-z]{2}:/gi, '');
-    
-    line = line.replace(/[\[\]〈〉❨❩⦗]/g, ''); 
-    
-    line = line.replace(/\([^)]*\)/g, ''); 
-    
+    line = line.replace(/[\[\]〈〉❨❩⦗]/g, '');
+    line = line.replace(/\([^)]*\)/g, '');
     line = line.replace(/\*\*/g, '');
-    line = line.replace(/[\u{1F300}-\u{1F6FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}]/gu, ''); 
-    
+    line = line.replace(/[\u{1F300}-\u{1F6FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}]/gu, '');
     line = line.replace(/NIDORAN_MALE_PLACEHOLDER/g, `Nidoran${MALE_SYM}`);
     line = line.replace(/NIDORAN_FEMALE_PLACEHOLDER/g, `Nidoran${FEMALE_SYM}`);
-    
-
     line = line.replace(/\s+/g, ' ').trim();
-    line = line.toLowerCase(); 
+    line = line.toLowerCase();
 
     return line || null;
 }
 
 function normalizeForComparison(name) {
     if (!name) return '';
-    const strippedName = String(name).replace(/\uFE0F/g, ''); 
+    const strippedName = String(name).replace(/\uFE0F/g, '');
     return strippedName.toLowerCase().trim().replace(/\s+/g, ' ');
 }
 
@@ -269,7 +260,7 @@ async function unlockChannel(channel) {
         if (channel.permissionOverwrites.cache.has(process.env.POKETWO_ID)) {
             try {
                 await channel.permissionOverwrites.edit(process.env.POKETWO_ID, {
-                    SendMessages: true 
+                    SendMessages: true
                 });
             } catch (error) {
                 console.error('❌ Error al editar permisos de Pokétwo:', error);
@@ -283,6 +274,34 @@ async function unlockChannel(channel) {
         return false;
     }
 }
+
+// ----------------------------------------------------------------------------------
+
+function generatePaginationButtons(state) {
+    const buttons = new ActionRowBuilder();
+    const currentPageIndex = state.currentPage;
+    const isFirstPage = currentPageIndex === 0;
+    const isLastPage = state.totalPages === 0 || currentPageIndex === state.totalPages - 1;
+
+    buttons.addComponents(
+        new ButtonBuilder()
+            .setCustomId(`${state.customIdPrefix}_prev_page`)
+            .setLabel('⬅️ Anterior')
+            .setStyle(ButtonStyle.Secondary)
+            .setDisabled(isFirstPage),
+        new ButtonBuilder()
+            .setCustomId(`${state.customIdPrefix}_close_list`)
+            .setLabel('❌ Cerrar')
+            .setStyle(ButtonStyle.Danger),
+        new ButtonBuilder()
+            .setCustomId(`${state.customIdPrefix}_next_page`)
+            .setLabel('Siguiente ➡️')
+            .setStyle(ButtonStyle.Secondary)
+            .setDisabled(isLastPage),
+    );
+    return buttons;
+}
+//====================================================================================
 
 const client = new Client({
     intents: [
@@ -299,50 +318,47 @@ client._paginationStates = client._paginationStates || new Collection();
 const paginationStates = client._paginationStates;
 
 
-// ===================================
-// ========== EVENTO LISTO (clientReady) ==========
-// ===================================
 
-client.on('clientReady', async () => { 
-    if (!client.user) return console.error("❌ Cliente no disponible en el evento clientReady.");
-    
+// =========================================================================
+
+client.on('ready', async () => { // Corregido 'clientReady' a 'ready' (más común y compatible)
+    if (!client.user) return console.error("❌ Cliente no disponible en el evento ready.");
+
     const totalGuilds = client.guilds.cache.size;
     const numberedChannels = client.guilds.cache.reduce((acc, guild) => {
-        return acc + guild.channels.cache.filter(ch => 
+        return acc + guild.channels.cache.filter(ch =>
             /^\d{1,3}$/.test(ch.name) && parseInt(ch.name) <= 450
         ).size;
     }, 0);
-    
+
     const freeChannels = numberedChannels - lockedChannels.size;
 
     console.log(`
 ╔════════════════════════════════════════════╗
-║                                            
-║   ✅ ${client.user.tag} En Línea 🟢           
-║                                            
+║
+║   ✅ ${client.user.tag} En Línea 🟢
+║
 ╠════════════════════════════════════════════╣
-║   🗄️  Servidores: ${totalGuilds.toString().padEnd(8)} 
-║   📊  Canales totales: ${numberedChannels.toString().padEnd(8)} 
-║   🟢  Canales libres: ${freeChannels.toString().padEnd(9)} 
-║   🚫  Canales bloqueados: ${lockedChannels.size.toString().padEnd(5)} 
+║   🗄️  Servidores: ${totalGuilds.toString().padEnd(8)}
+║   📊  Canales totales: ${numberedChannels.toString().padEnd(8)}
+║   🟢  Canales libres: ${freeChannels.toString().padEnd(9)}
+║   🚫  Canales bloqueados: ${lockedChannels.size.toString().padEnd(5)}
 ║
 ╚════════════════════════════════════════════╝
     `);
-    
+
     // ========== BUCLE DE ACTUALIZACIÓN PERIÓDICA ==========
     setInterval(() => {
         updateListEmbeds(client).catch(console.error);
-    }, UPDATE_INTERVAL_MS).unref?.(); 
-    console.log(`🔄 Bucle de actualización de embeds iniciado (cada ${UPDATE_INTERVAL_MS / 1000}s).`); 
+    }, UPDATE_INTERVAL_MS).unref?.();
+    
 });
-
-// ===================================
 
 // ========== MANEJO DE MENSAJES ==========
 
 client.on('messageCreate', async (message) => {
     try {
-        
+
         if (message.content && message.content.startsWith(PREFIX)) {
             const args = message.content.slice(PREFIX.length).trim().split(/ +/);
             const commandName = args.shift().toLowerCase();
@@ -350,7 +366,7 @@ client.on('messageCreate', async (message) => {
             try {
                 if (commands.prefixCommands[commandName]) {
                     await commands.prefixCommands[commandName].execute(client, message, args, {
-                        lockStatusData, 
+                        lockStatusData,
                         saveLockStatus,
                         lockedChannels,
                         lockMessages,
@@ -362,7 +378,12 @@ client.on('messageCreate', async (message) => {
                         lockChannel,
                         unlockChannel,
                         saveLockedChannels,
-                        paginationStates: client._paginationStates
+                        paginationStates: client._paginationStates,
+                        NAME_BOT_IDS,
+                        extractPokemonName, 
+                        normalizeForComparison,
+                        generatePaginationButtons 
+// ------------------------------------------------------------------------
                     });
                 }
             } catch (error) {
@@ -372,20 +393,20 @@ client.on('messageCreate', async (message) => {
             return;
         }
 
-        
+
         if (!/^\d{1,3}$/.test(message.channel.name) || parseInt(message.channel.name) > 450) return;
 
         const now = Date.now();
 
-        
+
         if (message.author.id === process.env.POKETWO_ID) {
-            
+
             const isSpawn = (message.content && message.content.toLowerCase().includes('a wild pokémon has appeared')) ||
                             (message.embeds && message.embeds.length > 0 && (message.embeds[0].image || message.embeds[0].title || message.embeds[0].description));
             if (isSpawn) {
-                
+
                 channelStates.set(message.channel.id, { waiting: true, ts: now });
-                
+
                 setTimeout(() => {
                     const s = channelStates.get(message.channel.id);
                     if (s && s.waiting && Date.now() - s.ts >= 11000) {
@@ -396,95 +417,95 @@ client.on('messageCreate', async (message) => {
             return;
         }
 
-        
+
         if (NAME_BOT_IDS.includes(message.author.id)) {
             const state = channelStates.get(message.channel.id);
-            
+
             const shouldTry = (state && state.waiting) || true;
 
             if (!shouldTry) return;
 
-            
-            const rawContent = message.content || '';
-            
-        
 
-            
+            const rawContent = message.content || '';
+
+
+
+
             const lower = rawContent.toLowerCase();
             if (lower.includes("is not a valid pokemon name") || lower.includes("you are already collecting this pokemon")) {
-                
+
                 if (state) channelStates.delete(message.channel.id);
                 return;
             }
 
-            
+
             const extracted = extractPokemonName(rawContent, message.author.id);
-            
-        
-            
+
+
+
             if (!extracted) {
                 if (state) channelStates.delete(message.channel.id);
                 return;
             }
 
-            
+
             const normalizedExtracted = normalizeForComparison(extracted);
-            
-            
-            
+
+
+
             const currentLockStatus = getLocksFromDisk();
-            
+
 
             let matched = null;
             for (const key of Object.keys(currentLockStatus || {})) {
                 if (normalizeForComparison(key) === normalizedExtracted) {
-                    matched = [key, currentLockStatus[key]]; 
-                    
+                    matched = [key, currentLockStatus[key]];
+
                     break;
                 }
             }
 
-            
+
             if (!matched) {
-                
-                
-                
+
+
+
                 if (state) channelStates.delete(message.channel.id);
                 return;
             }
 
-            
+
             const [pokemonKey, status] = matched;
             if (!status || !status.is_locked) {
-                
+
                 if (state) channelStates.delete(message.channel.id);
                 return;
             }
 
-            
-            
-            
+
+
+
             const cooldownTime = 30000;
             const cooldownKey = `lock_${message.channel.id}`;
             if (cooldowns.has(cooldownKey)) {
                 const expirationTime = cooldowns.get(cooldownKey) + cooldownTime;
                 if (now < expirationTime) {
-                    
+
                     if (state) channelStates.delete(message.channel.id);
                     return;
                 }
             } else {
-            
+
             }
 
             try {
-                
+
                 const existingMessages = await message.channel.messages.fetch({ limit: 5 });
                 const hasWarning = existingMessages.some(m =>
                     m.author.id === client.user.id && m.components && m.components.length > 0
                 );
-                
-            
+
+
 
 
                 if (!hasWarning) {
@@ -492,12 +513,12 @@ client.on('messageCreate', async (message) => {
                     setTimeout(() => cooldowns.delete(cooldownKey), cooldownTime);
 
                     const isPrivate = status.lock_type === 'private';
-                    
+
                     await lockChannel(message.channel, isPrivate);
                     lockedChannels.set(message.channel.id, { type: status.lock_type, pokemon: pokemonKey });
                     saveLockedChannels(lockedChannels);
 
-                    
+
                     if (isPrivate) {
                         const spawnRole = message.guild.roles.cache.find(r => r.name === SPAWN_ROLE_NAME);
                         if (spawnRole) {
@@ -530,11 +551,11 @@ client.on('messageCreate', async (message) => {
                         channelId: message.channel.id,
                         timestamp: Date.now()
                     });
-                    
+
                     // CORRECCIÓN CLAVE: Llamar a la actualización inmediata al bloquear un canal.
                     await updateListEmbeds(client);
-                    
-                    
+
+
                     if (config.logChannel) {
                         const logChannel = client.channels.cache.get(config.logChannel);
                         if (logChannel) {
@@ -550,45 +571,41 @@ client.on('messageCreate', async (message) => {
                         }
                     }
                 } else {
-                    
+
                 }
             } catch (error) {
                 console.error(`❌ Error CRÍTICO en el proceso de bloqueo para ${pokemonKey}:`, error);
             } finally {
-                
+
                 if (state) channelStates.delete(message.channel.id);
             }
             return;
         }
 
-        
+
     } catch (err) {
         console.error('❌ Error en messageCreate handler:', err);
     }
 });
 
-// ========== FUNCIONES DE ACTUALIZACIÓN DE ESTADO (CORREGIDA: Se incluye 'locks') ==========
+// ========== FUNCIONES DE ACTUALIZACIÓN DE ESTADO ==========
 
 async function updateListEmbeds(client) {
-    // Solo actualizamos los comandos que tienen la función robusta de actualización exportada.
-    // 🔑 CORRECCIÓN V1.0.6: Se incluye 'locks' para la actualización automática.
-    const commandsToUpdate = ['ls', 'gls', 'locks', 'locklist']; 
-    
+    const commandsToUpdate = ['ls', 'gls', 'locks', 'locklist'];
+
     for (const cmdName of commandsToUpdate) {
         const command = commands.prefixCommands[cmdName];
-        
-        // Verificamos que el comando exista y exporte la función updateActiveLists
+
         if (command && typeof command.updateActiveLists === 'function') {
             try {
-                // 🔑 CLAVE: Llamamos a la función de actualización dedicada que maneja la lógica de ese comando.
                 await command.updateActiveLists(client, client._paginationStates, lockedChannels);
             } catch (updateError) {
                 console.error(`❌ Error al ejecutar actualización de lista para ${cmdName}:`, updateError.message);
-                // La función interna de cada comando (ls/gls/locks) se encarga de borrar estados fallidos.
             }
         }
     }
 }
+
 
 // ========== INTERACCIONES ==========
 client.on('interactionCreate', async (interaction) => {
@@ -617,15 +634,15 @@ client.on('interactionCreate', async (interaction) => {
                     ephemeral: true
                 });
             }
-            
+
             await interaction.deferUpdate();
 
-            
+
             try {
                 await interaction.message.delete();
-                lockMessages.delete(channelId); 
+                lockMessages.delete(channelId);
             } catch (error) {
-                
+                // Ignore error on message delete
             }
 
             const unlockSuccess = await unlockChannel(channel);
@@ -649,9 +666,9 @@ client.on('interactionCreate', async (interaction) => {
 
             lockedChannels.delete(channelId);
             saveLockedChannels(lockedChannels);
-            
+
             // Llama a la función corregida updateListEmbeds
-            await updateListEmbeds(client); 
+            await updateListEmbeds(client);
 
             await channel.send({
                 content: `✅ Canal desbloqueado por <@${interaction.user.id}>`,
@@ -664,44 +681,44 @@ client.on('interactionCreate', async (interaction) => {
                     await logChannel.send({
                         embeds: [
                             new EmbedBuilder()
-                                .setColor(0x00FF00)
-                                .setTitle('🔓 Desbloqueo Manual')
+                                .setColor(0x00FF00)                                                  
+                            .setTitle('🔓 Desbloqueo Manual')
                                 .setDescription([
-                                    `**Pokémon:** ${lockInfo?.pokemon || 'Desconocido'}`,
+                                    
+                                    `**Pokémon:** ${lockInfo?.pokemon || 'Desconocido'}`,           
                                     `**Canal:** ${channel}`,
                                     `**Usuario:** ${interaction.user.tag}`,
                                     `[Ir al mensaje](${interaction.message.url})`
-                                ].join('\n'))
-                                .setFooter({ text: `ID Usuario: ${interaction.user.id}` })
-                                .setTimestamp()
+                                ].join('\n'))                                                        
+                            .setFooter({ text: `ID Usuario: ${interaction.user.id}` })   
+                            .setTimestamp()
                         ]
-                    }).catch(console.error);
-                }
-            }  
-        } catch (error) {
+                    }).catch(console.error);        
+                }                                              
+            }                                                                  } catch (error) {
             console.error('❌ Error en interacción de desbloqueo:', error);
             interaction.followUp({
                 content: '❌ Ocurrió un error al desbloquear',
                 ephemeral: true
-            });
-        }
-        return;
-    }
-
+            });                               
+        }     
+        return;  
+    }                                                                  
     // === BOTONES DE LB (lb command interactions) ===
-    else if (interaction.customId.startsWith('bl_')) {
-        const command = commands.prefixCommands['lb']; 
-        if (command && command.handleInteraction) {
-            await command.handleInteraction(interaction, { 
+    else if (interaction.customId.startsWith('bl_')) { 
+        const command = commands.prefixCommands['lb'];
+        
+        if (command && command.handleInteraction) {    
+            await command.handleInteraction(interaction, {      
                 client,
-                paginationStates: client._paginationStates || new Collection(),
-                lockedChannels
+                
+                paginationStates: client._paginationStates || new Collection(), 
+                lockedChannels                                                  
             });
         }
         return;
-    }
-
-    // === BOTONES DE PAGINACIÓN (TODOS LOS COMANDOS: ls, gls, locks) ===
+    }                                                                  
+    // === BOTONES DE PAGINACIÓN (TODOS LOS COMANDOS: ls, gls, locks, spawn) ===
     else if (
         interaction.customId.includes('_prev_page') ||
         interaction.customId.includes('_next_page') ||
@@ -717,21 +734,22 @@ client.on('interactionCreate', async (interaction) => {
             });
         }
 
-        
+
         const commandName = state.commandName;
         const command = commands.prefixCommands[commandName];
 
         if (command && command.handlePagination) {
             await command.handlePagination(interaction, state, {
-                paginationStates: paginationStates, 
-                lockedChannels: lockedChannels // Se asegura que esta dependencia se pase
+                paginationStates: paginationStates,
+                lockedChannels: lockedChannels, 
+                generatePaginationButtons: generatePaginationButtons // Añadido para el manejo correcto de spawn.js
             });
         }
         return;
     }
-    else if (interaction.customId.startsWith('help_')) { 
+    else if (interaction.customId.startsWith('help_')) {
         const state = paginationStates.get(interaction.message.id);
-        
+
         if (!state) {
             return interaction.reply({
                 content: '❌ Esta interacción ha expirado o no se encontró su estado. Vuelve a ejecutar `!help`.',
@@ -745,14 +763,13 @@ client.on('interactionCreate', async (interaction) => {
                 flags: 64
             }).catch(() => {});
         }
-
+                                                                              
         const command = commands.prefixCommands['help'];
 
         if (command && command.handleInteraction) {
             await command.handleInteraction(interaction, state, {
                 paginationStates: paginationStates,
-            });
-        }
+            });                                                                }
         return;
     }
 });
@@ -765,10 +782,9 @@ process.on('unhandledRejection', error => {
 process.on('uncaughtException', error => {
     console.error('❌ Excepción no detectada:', error);
     process.exit(1);
-});
-
+});                                                                    
 // ========== INICIAR BOT ==========
-client.login(process.env.DISCORD_TOKEN).catch(error => {
+client.login(process.env.DISCORD_TOKEN).catch(error => { 
     console.error('❌ Error al iniciar sesión:', error);
     process.exit(1);
 });
