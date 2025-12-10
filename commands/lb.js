@@ -1,4 +1,4 @@
-// lb.js — versión con Submenús y 4 Botones en TODA la navegación
+// lb.js v1.0.0
 const {
   EmbedBuilder,
   ActionRowBuilder,
@@ -955,4 +955,5 @@ module.exports = {
       } catch (e) {}
     }
   },
+
 };
