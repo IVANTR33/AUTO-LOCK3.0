@@ -1,3 +1,4 @@
+// index.js v1.0.8
 const {
     Client,
     GatewayIntentBits,
