@@ -234,9 +234,7 @@ module.exports = {
     
     //=====execute (Mismo)=====
     async execute(client, message, args, { lockedChannels, paginationStates }) { 
-        if (!message.member.permissions.has(PermissionsBitField.Flags.Administrator)) {
-            return message.reply('❌ ¡No tienes los permisos para usar este comando!');
-        }
+       
         
         const customPrefix = 'locks'; 
 
