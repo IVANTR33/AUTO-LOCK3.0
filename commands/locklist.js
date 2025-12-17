@@ -216,9 +216,7 @@ module.exports = {
     description: 'Muestra los canales bloqueados con paginación y enlaces rápidos.',
     
     async execute(client, message, args, { lockedChannels, paginationStates }) { 
-        if (!message.member.permissions.has(PermissionsBitField.Flags.Administrator)) {
-            return message.reply('❌ ¡No tienes los permisos para usar este comando!');
-        }
+        
 
         try {
             // 1. Obtener la lista de bloqueos inicial
