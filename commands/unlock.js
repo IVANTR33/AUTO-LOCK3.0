@@ -6,9 +6,7 @@ module.exports = {
     name: 'unlock',
     description: 'Desbloquea manualmente un canal de spawn o múltiples canales por Pokémon.',
     async execute(client, message, args, { unlockChannel, lockedChannels, saveLockedChannels, config, lockMessages }) {
-        if (!message.member.permissions.has(PermissionsBitField.Flags.ManageChannels)) {
-            return message.reply('❌ Se requieren permisos para gestionar canales.');
-        }
+        
 
         // Comando para desbloquear todos los canales de un Pokémon específico
         if (args[0]?.toLowerCase() === 'all' && args[1]) {
