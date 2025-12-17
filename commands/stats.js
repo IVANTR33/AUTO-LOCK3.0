@@ -33,13 +33,9 @@ module.exports = {
     paginationStates // 🔑 Necesario para guardar el estado del botón
   }) {
     
-    // ... (lógica de verificación de permisos, bots, roles, rendimiento) ...
+    
 
-    // Verificar permisos
-    if (!message.member.permissions.has(PermissionsBitField.Flags.ManageGuild)) {
-      return message.reply('❌ Necesitas permiso de `Gestionar Servidor` para usar este comando.');
-    }
-
+//=====================================================================
     // Mensaje de carga
     const loadingEmbed = new EmbedBuilder()
       .setColor(0x3498db)
