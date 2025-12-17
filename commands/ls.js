@@ -259,9 +259,7 @@ module.exports = {
     
     //=====execute=====
     async execute(client, message, args, { paginationStates }) {
-        if (!message.member.permissions.has(PermissionsBitField.Flags.ManageChannels)) {
-            return message.reply({ content: '❌ Se requieren permisos para gestionar canales para usar este comando.', flags: 64 });
-        }
+       
 
         const searchTerm = args.join(' ').trim();
         if (!searchTerm) {
