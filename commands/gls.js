@@ -270,9 +270,7 @@ module.exports = {
     
     //=====execute (Crea el estado inicial)=====
     async execute(client, message, args, { lockedChannels, paginationStates }) { 
-        if (!message.member.permissions.has(PermissionsBitField.Flags.ManageChannels)) {
-            return message.reply({ content: '❌ Se requieren permisos para gestionar canales para usar este comando.', flags: 64 });
-        }
+        
         
         const searchPokemonNames = args.join(' ').toLowerCase().split(',')
             .map(p => p.trim())
